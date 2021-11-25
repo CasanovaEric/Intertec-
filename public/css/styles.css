@@ -1,11 +1,251 @@
-*{
-    background-color: rgb(17, 120, 128);
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
+
+
+
+.header {
+    background-color: #333;
+    padding: 1rem;
+    width: 100%;
+}
+
+
+
+
+.header a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: #333;
+    font-size: 1.2rem;
+    line-height: 1.6em;
+}
+
+.logo-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navigation ul li {
+    display: inline-block;
+}
+
 h1 {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color:blue;
+    font-size: 2rem;
+    line-height: 1.3em;
+    text-align: center;
 }
-.id {
-font-size: auto;
-border: brown;
+
+h2 {
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.3em;
+    padding: 2rem 0 1rem 0;
+}
+
+.accesorios {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 0 2rem;
+}
+.premium {
+    align-items: center;
+    text-align: center;
+}
+
+h3{
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    padding: 2rem 0 1rem 0;
+}
+
+h4 {
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    padding: 2rem 0 1rem 0;
+}
+
+h5 {
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    padding: 2rem 0 1rem 0;
+}
+
+h6 {
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    padding: 2rem 0 1rem 0;
+}
+
+.iconos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    padding: 1em;
+    text-decoration-style: dashed;
+
+}
+
+.navigation ul li a {
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+
+
+
+.log-sam {
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.descripcion {
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    list-style: none;
+    padding: 1rem;
+
+}
+
+
+.navigation ul li a:hover {
+    background: #4a4a4a;
+}
+
+.container {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.main {
+    padding-top: 2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    width: 100%;
+    background-color: paleturquoise;
+}
+
+
+
+.promociones {
+    text-align: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 2rem;
+    line-height: 1.3em;
+}
+
+.footer {
+    display: inline-block;
+}
+
+.footer {
+    background: #f2f2f2;
+    padding: 4rem 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6rem;
+}
+
+.pie,
+.soporte,
+.ventas {
+    text-align: center;
+    font-size: 60%;
+    display:inline-block;
+    padding: 2rem;
+    list-style: none;
+}
+
+.redes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+    padding: 2em;
+    
+}
+
+.tecno{
+    padding: 2rem;
+    align-items:center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 2rem 0 1rem 0;
+    font-size: 50%;
+}
+
+nav ul {
+    font-size: 12px;
+    text-align: justify;
+}
+
+@media all and (min-width: 320px) {
+
+    .pie,
+.soporte,
+.ventas {
+    display:inline-block;
+}
+}
+
+@media all and (min-width: 1400px) {
+    .navigation {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .navigation ul li {
+        display: inline-block;
+    }
+
+    .logo {
+        
+        font-size: 1.4em;
+    }
+
+    .navigation ul li a:hover {
+        background: #4a4a4a;
+    }
 }

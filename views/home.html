@@ -2,31 +2,44 @@
 <html lang="en">
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="/css/styles.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style2.css">
     <title>INTERTEC</title>
 </head>
 
 <body>
-    <h1>TENEMOS LO QUE ESTAS BUSCANDO</h1>
-    <header>
-        <div id="cabecera">
-            <div class="logo">
-                <img src="/imagenes/intertec.png" width=100% alt="Logo de INTERTEC">
-            </div>
-            <div class="form" action="#" method="GET">
-                <div class="buscador">Buscar productos<i class="fa fa-search"></i></div>
-                <div class="promociones"></div>
-                <li><a href="/register">Creá tu cuenta <i class="far fa-id-card"></a></li>
-                <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></a></i>
-            </div>
 
-            <h2 class="que-buscas">¿QUE BUSCAS?</h2>
-            <nav>
-                <img src="/imagenes/logo.png" alt="logo samsung">
+    <header class="header">
+        <div class="container logo-nav-container">
+            <div class="logo">
+                <img src="/imagenes/intertec.png" width="300" alt="logo intertec">
+            </div>
+            <nav class="navigation">
                 <ul>
+                    <div class="form" action="#" method="GET"></div>
+                    <li><a href="/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
+                    <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <h1>SOLUCIONES TECNOLOGICAS</h1>
+        </div>
+        <div class="log-sam">
+            <img src="/imagenes/logo-samsung1.jpg" width="300" alt="logo samsung">
+        </div>
+        <h2 class="que-buscas">¿QUE BUSCAS?</h2>
+        <div class="container">
+            <nav>
+                <ul class="descripcion">
                     <li><a href="#">Smartphone</a></li>
                     <li><a href="#">Funda</a></li>
                     <li><a href="#">Templados</a></li>
@@ -34,79 +47,74 @@
                     <li><a href="#">Auriculares</a></li>
                 </ul>
             </nav>
-
-            <section class="banner">
-                <img src="/imagenes/baneer.jpg" width=100% alt="banner Samsung">
-            </section>
-            <main>
-                <h2>PROMOCIONES</h2>
-                <article id="promociones">
-                    <img src="/imagenes/celulares.webp" alt="celulares">
-                    <img src="/imagenes/note.webp" alt="note">
-                    <img src="/imagenes/note-con-lapiz.webp" alt="note-con-lapiz">
-                    <img src="/imagenes/flex-2.webp" alt="flex-2">
-                </article>
-
-                <h2 class="lo-mas-buscado">LO MAS BUSCADO</h2>
-                <article id="premium">
-                    <img src="/imagenes/flex.webp" alt="flex">
-                    <img src="/imagenes/celu-azul.webp" alt="celu-azul">
-                    <img src="/imagenes/celu-negro.webp" alt="celu-negro">
-                    <img src="/imagenes/flex-4.webp" alt="flex-4">
-                </article>
-                <h2>¿QUE BUSCAS?</h2>
-                <i class="fas fa-gamepad"></i>
-                <i class="fas fa-camera-retro"></i>
-                <i class="fas fa-battery-three-quarters"></i>
-                <i class="fas fa-sd-card"></i>
-                <i class="fas fa-dollar-sign"></i>
-
-                <h3>ACCESORIOS</h3>
-                <article class="accesorios">
-                    <img src="/imagenes/Home_trending_PC.webp" alt="Home_trending_PC">
-                    <img src="/imagenes/-enjoy-improved-full-.webp" alt="-enjoy-improved-full-">
-                    <img src="/imagenes/-frontblack-.webp" alt="-frontblack-">
-                    <img src="/imagenes/ar-feature-enjoy-.webp" alt="ar-feature-enjoy-">
-                    <img src="/imagenes/1-watch.webp" alt="1-watch">
-                    <img src="/imagenes/2-watch.webp" alt="2-watch">
-                    <img src="/imagenes/3-watch.webp" alt="3-watch">
-                    <img src="/imagenes/galaxy-watch.webp" alt="galaxy-watch">
-                </article>
-            </main>
-    </header>
-    <footer>
-        <section class="section-footers">
-            <img src="/imagenes/intertec.png" width=100% alt="intertec">
-            <div class="pie">
-                <ul class="tilulares-footer">Acerca de nosotros</ul>
-                <li class="info-empresa">Información de la empresa</li>
-                <li class="area-negocio">Área de negocio</li>
-                <li class="id-marca">Identidad de la marca</li>
-                <li class="labor">laborales</li>
-                <li class="inversores">Relaciones con los inversores</li>
-                <li class="noti">Noticias</li>
-                <li class="etica">Ética</li>
-                <li class="diseño">Diseño de Samsung</li>
-            </div>
-
-            <div id="soporte">
-                <ul>Soporte</ul>
-                <li class="chat">Chat Online </li>
-                <li class="e-soporte">Email de Soporte</li>
-                <li class="tel-soport">Teléfono de Soporte</li>
-                <li class="soprt-samsung">Soporte de Samsung Argentina</li>
-            </div>
-
-            <div>
-                <ul>Ventas on line</ul>
-                <li class="tabletas">Tablets</li>
-                <li class="auri">Audio</li>
-                <li class="accesorios">Accesorios para moviles</li>
-                <li class="relojes">watch</li>
-            </div>
-
-        </section>
-    </footer>
+        </div>
+        <h3>PROMOCIONES</h3>
+        <article class="promociones">
+            <img src="/imagenes/celu-azul.webp" width="200" alt="celu-azul">
+            <img src="/imagenes/celu-negro.webp" width="200" alt="celu-negro">
+        </article>
+        <h4 class="lo-mas-buscado">LO MAS BUSCADO</h4>
+        <div class="premium">
+            <img src="/imagenes/flex.webp" width="200" alt="flex">
+            <img src="/imagenes/note-con-lapiz.webp" width="200" alt="note-con-lapiz">
+            <img src="/imagenes/flex-2.webp" width="200" alt="flex-2">
+        </div>
+        <h5>¿QUE BUSCAS?</h5>
+        <div class="iconos">
+            <i class="fas fa-gamepad"> Gamepad</i>
+            <i class="fas fa-camera-retro"> Camara</i>
+            <i class="fas fa-battery-three-quarters"> Bateria</i>
+            <i class="fas fa-sd-card"> Memoria</i>
+        </div>
+        <h6>ACCESORIOS</h6>
+        <div class="accesorios">
+            <img src="/imagenes/-enjoy-improved-full-.webp" width="200" alt="-enjoy-improved-full-">
+            <img src="/imagenes/ar-feature-enjoy-.webp" width="200" alt="ar-feature-enjoy-">
+            <img src="/imagenes/black-charger.webp" width="120" alt="black-charger">
+        </div>
+        <h6>Watch</h6>
+        <div class="watch">
+            <img src="/imagenes/1-watch.webp" width="200" alt="1-watch">
+            <img src="/imagenes/2-watch.webp" width="200" alt="2-watch">
+            <img src="/imagenes/3-watch.webp" width="200" alt="3-watch">
+        </div>
+        <footer>
+            <div class="redes">
+            <img src="/imagenes/insta.png" width="20" alt="insta">
+            <img src="/imagenes/logo-twitter-black.png" width="20" alt="twtr">
+            <img src="/imagenes/descarga.png" width="20" alt="wsp">
+            <img src="/imagenes/logo-facebook-black-and-white.png" width="20" alt="face">
+        </div>
+            <section class="section-footers">
+                <div class="container">
+                    <div class="pie">
+                        <ul class="tilulares-footer">Acerca de nosotros</ul>
+                        <li class="info-empresa">Información de la empresa</li>
+                        <li class="labor">laborales</li>
+                        <li class="noti">Noticias</li>
+                        <li class="etica">Ética</li>
+                    </div>
+                    <div class="soporte">
+                        <ul>Soporte</ul>
+                        <li class="chat">Chat Online </li>
+                        <li class="e-soporte">Email de Soporte</li>
+                        <li class="tel-soport">Teléfono de Soporte</li>
+                        <li class="soprt-samsung">Soporte de Samsung Argentina</li>
+                    </div>
+                    <div class="ventas">
+                        <ul>Ventas on line</ul>
+                        <li class="tabletas">Tablets</li>
+                        <li class="auri">Audio</li>
+                        <li class="acces">Accesorios para moviles</li>
+                        <li class="relojes">watch</li>
+                    </div>
+                </div>
+                <div class="tecno">
+                    <img class="tecno" src="/imagenes/tecnología.jpg" width="300" alt="tecnología">
+                    <p>República Argentina | Todos los derechos reservados | Política de privacidad | Términos y Condiciones © 2000-2021</p>
+                    <p>-INTERTEC INC-</p>
+                </div>
+        </footer>
 </body>
 
 </html>
