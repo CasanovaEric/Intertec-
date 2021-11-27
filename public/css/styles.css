@@ -221,6 +221,58 @@ nav ul {
     text-align: justify;
 }
 
+.flex-main{
+    flex-wrap:wrap;
+}
+.flex-main, .flex-section{
+    display:flex;
+}
+
+.flex-section-double{
+    min-width: 30%;
+}
+.w100{
+    width:100%;
+}
+
+.flex-center{
+    justify-content: space-evenly;
+}
+.flex-column{
+    flex-direction:column;
+}
+.flex-row{
+    flex-direction:row;
+}
+.flex-space-between{
+    justify-content: space-between;
+}
+
+.pl10{
+    padding-left: 10px;
+}
+
+input{
+    height: 2em;
+}
+.p10{
+    padding:10px;
+}
+
+.mt10{
+    margin-top:2.5em
+}
+
+.max-width20em{
+    max-width: 20em;
+}
+
+.border_bottom{
+    border-top: 0px solid #C00;
+    border-right: 0px solid #C00;
+    border-bottom: 1px solid black;
+    border-left: 0px solid #C00;
+}
 @media all and (min-width: 320px) {
 
     .pie,
