@@ -1,7 +1,7 @@
 quienes somos?
 
 
-Hola!!!! Intertec  nace de la idea de poder traer al mercado a los mejores celulares del mercado,
+Intertec nace de la idea de poder traer al mercado a los mejores celulares del mercado,
 con la finalidad que todos puedan acceder a la tecnologia mas actual.
 
 nuestro target es toda la poblacion que quiera o le guste mantenerse actualizado con los nuevos equipos del mercado.
@@ -11,6 +11,7 @@ Referencias:
 
 https://www.walmart.com/
 https://www.bestbuy.com/
+https://www.motorola.com.ar/
 
 El 3er y 4to ecommerce del mundo según el revenue. Muy buenos ejemplos a seguir sobre la UX en términos de menus de categorías y búsqueda de productos en el sitio, que buscan desde un abordaje simple lograr capturar lo que está queriendo el usuario en términos de navegación contribuye una parte esencial pensando en la valoración del cliente sobre la experiencia del sitio y su influencia sobre el conversion rate
 
