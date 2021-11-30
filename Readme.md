@@ -1,7 +1,7 @@
 quienes somos?
 
 
-Intertec Hola! nace de la idea de poder traer al mercado a los mejores celulares del mercado,
+Hola!!!! Intertec  nace de la idea de poder traer al mercado a los mejores celulares del mercado,
 con la finalidad que todos puedan acceder a la tecnologia mas actual.
 
 nuestro target es toda la poblacion que quiera o le guste mantenerse actualizado con los nuevos equipos del mercado.
