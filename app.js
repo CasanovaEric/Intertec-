@@ -16,3 +16,10 @@ app.get("/bateria", (req, res) => {
     res.sendFile(path.join(__dirname + "/views/bateria.html"))
 })
 
+app.get("/registro", (req, res) => { 
+    res.sendFile(path.join(__dirname + "/views/registro.html"))
+})
+
+app.get("/confirmar-orden", (req, res) => { 
+    res.sendFile(path.join(__dirname + "/views/confirmar-orden.html"))
+})
