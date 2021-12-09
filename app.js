@@ -1,4 +1,4 @@
-const express = require ("express")
+/*const express = require ("express")
 const path = require("path")
 const app = express ()
 
@@ -20,15 +20,13 @@ app.get("/registro", (req, res) => {
     res.sendFile(path.join(__dirname + "/views/registro.html"))
 })
 
-<<<<<<< HEAD
 app.get("/confirmar-orden", (req, res) => { 
     res.sendFile(path.join(__dirname + "/views/confirmar-orden.html"))
 })
-=======
 
 // app.listen(3000, ()=>{
 //     console.log('Servidor funcionando');
-// }); 
+// });*/ 
 
 
 
@@ -70,4 +68,3 @@ app.post('/', (req,res)=>{
     console.log(req.body);
     res.sendFile(__dirname + '/views/login.html');
 });
->>>>>>> ac8c7171e808da52b1b465c9f2896ea762d56335
