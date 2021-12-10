@@ -1,30 +1,21 @@
 //declarando constantes
 const express = require('express');
 const router= express.Router();
-//const app= express();
+const mainController= require('../controllers/mainController');
 const path = require('path');
-
 
 const options = {
     root: path.join(__dirname, '../views')
 };
 
-router.get('/', (req,res)=>{
-    res.sendFile('index.html', options);
-    
-});
+router.get('/', mainController.index);
 
-router.get('/login', (req,res)=>{
-    res.sendFile('login.html', options);
-});
+router.get('/login', mainController.login);
 
-router.get('/register', (req,res)=>{
-    res.sendFile('register.html', options);
-});
 
-router.get('/confirm-order', (req,res)=>{
-    res.sendFile('confirm-order.html', options);
-});
+router.get('/register', mainController.register);
+
+router.get('/confirm-order', mainController.confirmOrder);
 
 module.exports= router;
 //module.exports= app;

@@ -11,21 +11,16 @@ app.listen(process.env.PORT || 3000, function() {
     
     console.log('Servidor corriendo en puerto 3000');
 });
+
 app.use(express.static('public'));
+
+app.set('views engine', 'ejs');
 
 app.use('/', RouteMain);
 
 
 //app.use(express.json());
 //app.use(express.urlencoded({extended: true}))
-
-
- app.set('views', './views')
- app.set('views','ejs')
-
-
-
-
 // app.post('/', (req,res)=>{
 //     console.log(req.body);
 //     res.sendFile(__dirname + '/views/login.html');
