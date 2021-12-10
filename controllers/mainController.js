@@ -16,4 +16,6 @@ const controller= {
     }
 }
 
+
+//exportando modulo
 module.exports= controller;

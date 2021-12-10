@@ -18,4 +18,3 @@ router.get('/register', mainController.register);
 router.get('/confirm-order', mainController.confirmOrder);
 
 module.exports= router;
-//module.exports= app;
