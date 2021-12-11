@@ -1,4 +1,4 @@
-const express= require('express');
+/*const express= require('express');
 const router= express.Router();
 const productsController= require('../controllers/productsController')
 
@@ -11,4 +11,4 @@ const options = {
 router.get('/producto', productsController.producto)
 
 //exportando modulos
-module.exports= router;
+module.exports= router;*/

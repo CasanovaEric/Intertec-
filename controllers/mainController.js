@@ -13,6 +13,14 @@ const controller= {
 
     confirmOrder: (req, res)=>{
         return res.render('../views/confirm-order.ejs')
+    },
+
+    productos: (req, res)=>{
+        return res.render('../views/motog60s.ejs')
+    },
+
+    carrito: (req, res)=>{
+        return res.render('../views/carrito.ejs')
     }
 }
 

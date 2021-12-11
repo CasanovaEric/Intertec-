@@ -1,4 +1,4 @@
-const controller={
+/*const controller={
     producto: (req, res)=>{
         return res.render('../views/motog60s')
     },
@@ -7,3 +7,4 @@ const controller={
 
 //exportando moduloss
 module.exports= controller;
+*/

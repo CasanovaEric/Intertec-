@@ -19,7 +19,7 @@ app.set('views engine', 'ejs');
 
 app.use('/', RouteMain);
 
-app.use('/producto', RouteProduct);
+//app.use('/producto', RouteProduct);
 
 
 //app.use(express.json());
