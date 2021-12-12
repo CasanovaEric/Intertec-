@@ -401,10 +401,10 @@ ul.slider li:target {
 
 .tituloprod { 
     font-family: 'Lato', sans-serif;
-    font-size: 50px;
+    font-size: 80px;
     color: white;
-    position: absolute;
-    margin-top: 250px;
+    text-align: center;
+    margin-top: 180px;
     margin-left: 125px;
 }
 
@@ -412,11 +412,30 @@ ul.slider li:target {
 
 .infog60s { 
     background-color: white;
-    width: 500px;
+    width: 300px;
     position: relative;
-    top: -1000px; 
-    left: 900px;
-    padding: 100px;
+    top: -900px; 
+    left: 610px;
+    padding: 50px;
+}
+
+.infog60s-2 { 
+    background-color: white;
+    width: 300px;
+    position:relative;
+    top: -1430px; 
+    left: 1430px;
+    padding: 50px;
+}
+
+
+.infog60s-3 { 
+    background-color: white;
+    width: 300px;
+    position:relative;
+    top: -2050px; 
+    left: 1020px;
+    padding: 50px;
 }
 
 .titulo { 
@@ -425,6 +444,8 @@ ul.slider li:target {
     
 }
 
+
+
 p {  font-family: 'Lato', sans-serif;
     font-size: 16px;}
 
@@ -432,3 +453,165 @@ p {  font-family: 'Lato', sans-serif;
    text-align: center;
    margin-left:5px;
 }
+
+
+.espec0 { text-align: center;
+color: white;
+font-family: 'Lato', sans-serif;
+font-size: 25px;
+margin-top: -1800px;
+margin-bottom: 80px;
+}
+
+.espec1 { 
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-items:unset;
+    align-content:flex-start;
+}
+
+
+.cam-espec { 
+   text-align-last: center;
+    color:white; 
+    font-family:'Lato', sans-serif; 
+    font-size: 18px;
+    font-weight: bolder;
+    order:0;
+    flex:0 1 auto;
+    align-self:auto;
+    height:auto;
+    width:auto;
+    text-align-last: center;
+}
+
+.fa-camera{ 
+    color: orange;
+}
+
+.bat-espec { 
+    text-align-last: center;
+    color:white; 
+    font-family:'Lato', sans-serif; 
+    font-size: 18px;
+    font-weight: bolder;
+    order:0;
+    flex:0 1 auto;
+    align-self:auto;
+    height:auto;
+    width:auto;
+}
+
+.fa-battery-full { color: orange;}
+
+.almac-espec { 
+    text-align-last: center;
+    color:white; 
+    font-family:'Lato', sans-serif; 
+    font-size: 18px;
+    font-weight: bolder;
+    order:0;
+    flex:0 1 auto;
+    align-self:auto;
+    height:auto;
+    width:auto;
+}
+
+.fa-sd-card { color: orange;}
+
+
+.panta-espec {  
+    text-align-last: center;
+    color:white; 
+    font-family:'Lato', sans-serif; 
+    font-size: 18px;
+    font-weight: bolder;
+    order:0;
+    flex:0 1 auto;
+    align-self:auto;
+    height:auto;
+    width:auto;
+}
+
+.fa-mobile-alt { color: orange;}
+
+
+.cont-espec{ 
+    margin-top: 80px;
+    border-top: solid orange 3px;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-items:unset;
+    align-content:flex-start;
+}
+
+.obj1 {  
+    text-align-last: center;
+    font-family:'Lato', sans-serif; 
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    order:0;
+    flex:0 1 auto;
+    align-self:auto;
+    height:auto;
+    width:auto;}
+
+.obj2 { 
+    text-align-last: center;
+    font-family:'Lato', sans-serif; 
+    color: white;
+    font-size: 16px; 
+    order:0;
+    flex:0 1 auto;
+    align-self:auto;
+    height:auto;
+    width:auto;}
+
+.obj3 { 
+    text-align-last: center;
+    font-family:'Lato', sans-serif; 
+    color: white;
+    font-size: 16px;
+    order:0;
+    flex:0 1 auto;
+    align-self:auto;
+    height:auto;
+    width:auto;
+}
+
+.obj4 { 
+    color:white; display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-items:unset;
+    align-content:flex-start;
+}
+
+.obj5 { 
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:flex-end;
+    align-items:flex-end;
+    align-content:flex-start;
+    color: white;
+    margin-right: 200px;
+ }
+
+.obj6 {
+    color:white; display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-items:unset;
+    align-content:flex-start;
+    margin-top: 40px;
+ }
+
+ 
