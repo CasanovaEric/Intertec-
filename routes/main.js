@@ -11,6 +11,7 @@ const options = {
 router.get('/', mainController.index);
 
 router.get('/login', mainController.login);
+router.post('/', mainController.index);
 
 
 router.get('/register', mainController.register);
