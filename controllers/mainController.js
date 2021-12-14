@@ -10,6 +10,7 @@ const controller= {
     login:(req, res)=>{
         return res.render('../views/login.ejs')
     },
+    
 
     confirmOrder: (req, res)=>{
         return res.render('../views/confirm-order.ejs')
