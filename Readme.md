@@ -1,6 +1,43 @@
+comandos git a usar:
+git init.
+git clone> url del repo>
+git fetch, mantener actualizado tu repo local con los cambios del remote.
+git pull, para descargar los cambios a tu repo local desde el repo remote.
+
+git push origin (nombre de la rama ( ' a la cual quieren subir los cambios del repo local al repo remote' ).
+
+dependencias usadas:
+{"ejs",
+"express",
+"nodemon", 
+}
+
+comando por terminal para correr el proyecto en servidor local
+nodemon start
+localhost:3000/ direccion del servidor levantado con nodemon.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 quienes somos?
 
-intertec nace de la idea de poder traer al mercado a los mejores celulares del mercado,
+Intertec nace de la idea de poder traer al mercado a los mejores celulares del mercado,
 con la finalidad que todos puedan acceder a la tecnologia mas actual.
 
 nuestro target es toda la poblacion que quiera o le guste mantenerse actualizado con los nuevos equipos del mercado.
@@ -10,6 +47,7 @@ Referencias:
 
 https://www.walmart.com/
 https://www.bestbuy.com/
+https://www.motorola.com.ar/
 
 El 3er y 4to ecommerce del mundo según el revenue. Muy buenos ejemplos a seguir sobre la UX en términos de menus de categorías y búsqueda de productos en el sitio, que buscan desde un abordaje simple lograr capturar lo que está queriendo el usuario en términos de navegación contribuye una parte esencial pensando en la valoración del cliente sobre la experiencia del sitio y su influencia sobre el conversion rate
 
