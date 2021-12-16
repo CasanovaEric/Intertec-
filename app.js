@@ -24,7 +24,8 @@ app.use('/', RouteMain);
 //"ROUTER PRODUCTS"
 app.use('/', RouteProducts);
 app.use('/products', RouteProducts);
-app.use('/products/:id', RouteProducts);
+
+//app.use('/products/:id', RouteProducts);
 app.use('/products/detailsProducts', RouteProducts);
 app.use('/products/detailsProducts/:id', RouteProducts);
 
