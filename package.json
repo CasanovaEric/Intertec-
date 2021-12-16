@@ -13,5 +13,13 @@
     "nodemon": "^2.0.15"
   },
   "devDependencies": {},
-  "description": ""
+  "description": "comandos git a usar:\r git init.\r git clone> url del repo>\r git fetch, mantener actualizado tu repo local con los cambios del remote.\r git pull, para descargar los cambios a tu repo local desde el repo remote.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CasanovaEric/Intertec1-.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CasanovaEric/Intertec1-/issues"
+  },
+  "homepage": "https://github.com/CasanovaEric/Intertec1-#readme"
 }
