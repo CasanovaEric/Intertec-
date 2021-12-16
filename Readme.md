@@ -1,5 +1,41 @@
-quienes somos?
+comandos git a usar:
+git init.
+git clone> url del repo>
+git fetch, mantener actualizado tu repo local con los cambios del remote.
+git pull, para descargar los cambios a tu repo local desde el repo remote.
 
+git push origin (nombre de la rama ( ' a la cual quieren subir los cambios del repo local al repo remote' ).
+
+dependencias usadas:
+{"ejs",
+"express",
+"nodemon", 
+}
+
+comando por terminal para correr el proyecto en servidor local
+nodemon start
+localhost:3000/ direccion del servidor levantado con nodemon.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+quienes somos?
 
 Intertec nace de la idea de poder traer al mercado a los mejores celulares del mercado,
 con la finalidad que todos puedan acceder a la tecnologia mas actual.
