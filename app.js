@@ -1,4 +1,5 @@
 //declarando constantes
+const { Router } = require('express');
 const express = require('express');
 const app = express();
 const path= require('path');
@@ -12,7 +13,7 @@ app.listen(process.env.PORT || 3000, function() {
     
     console.log('Servidor corriendo en puerto 3000');
 });
-
+//METHOD USED
 app.use(express.static('public'));
 
 app.set('views engine', 'ejs');
@@ -20,18 +21,15 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use('/', RouteMain);
 
-//Routes Products
+//"ROUTER PRODUCTS"
+app.use('/', RouteProducts);
 app.use('/products', RouteProducts);
+app.use('/products/:id', RouteProducts);
 app.use('/products/detailsProducts', RouteProducts);
+app.use('/products/detailsProducts/:id', RouteProducts);
 
 
 
 
-//app.use(express.json());
-//app.use(express.urlencoded({extended: true}))
-// app.post('/', (req,res)=>{
-//     console.log(req.body);
-//     res.sendFile(__dirname + '/views/login.html');
-// });
 
 
