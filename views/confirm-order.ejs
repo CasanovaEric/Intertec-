@@ -1,34 +1,6 @@
 
-<<<<<<< HEAD:views/confirmar-orden.html
-<head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <link href="/css/styles.css" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INTERTEC</title>
-</head>
-<header class="header">
-    <div class="container logo-nav-container">
-        <div class="logo">
-            <img src="/imagenes/intertec.png" width="300" alt="logo intertec">
-        </div>
-        <nav class="navigation">
-            <ul>
-                <div class="form" action="#" method="GET"></div>
-                <li><a href="/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
-                <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-=======
 <!--'include Head'-->
 <%- include('partials/head' ,{title: 'confirm-order'} )%>
->>>>>>> 737d603505693aaa2b28f8c39708c233558ec0b9:views/confirm-order.ejs
 
 <body>
     <!--'include headerNavBar'-->
@@ -82,53 +54,6 @@
             </div>
 
 
-<<<<<<< HEAD:views/confirmar-orden.html
-        </section>
-        <section class="flex-section flex-column flex-section-double p10">
-            <h2>Tu pedido</h2>
-            <div id="titulos" class="flex-section flex-space-between border_bottom">
-                <label>producto</label>
-                <label>subtotal</label>
-            </div>
-            <div id="productos" class="flex-section flex-space-between border_bottom">
-                <label>producto1</label>
-                <label>$5500</label>
-            </div>
-            <div id="productos" class="flex-section flex-space-between border_bottom">
-                <label>producto2</label>
-                <label>$5500</label>
-            </div>
-            <div id="subtotal" class="flex-section flex-space-between border_bottom">
-                <label>subtotal</label>
-                <label>$45500</label>
-            </div>
-            <div id="envio" class="flex-section flex-space-between border_bottom">
-                <label>Envio Gratuito CABA</label>
-            </div>
-            <div id="total" class="flex-section flex-space-between">
-                <label>total</label>
-                <label>$45.500</label>
-            </div>
-
-            <section class="flex-section flex-column mt10">
-                <div class="flex-section flex-row p10">
-                    <input type="radio">
-                    <label class="pl10">Efectivo</label>
-                </div>
-                <div class="flex-section flex-row p10">
-                    <input type="radio">
-                    <label class="pl10">Transferencia Bancaria</label>
-                </div>
-                <div class="flex-section flex-row p10">
-                    <input type="radio">
-                    <label class="pl10">PayPal</label>
-                </div>
-
-                <button class="max-width20em" style="height:4em;float:right;">realizar el pedido</button>
-            </section>
-        </section>
-    </main>
-=======
     </section>
     <section class="flex-section flex-column flex-section-double p10">
         <h2>Tu pedido</h2>
@@ -169,11 +94,12 @@
             <input type="radio">
             <label class="pl10">PayPal</label>
         </div>
-        <div><button class="max-width20em" style="height:4em;float:right;">realizar el pedido</button></div>
+        <div>
+            <button class="max-width20em" style="height:4em;float:right;">realizar el pedido</button>
+        </div>
     </section>
 </section>
 </main>
->>>>>>> 737d603505693aaa2b28f8c39708c233558ec0b9:views/confirm-order.ejs
 
 </body>
 <%- include('partials/footer') %>
