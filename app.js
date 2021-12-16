@@ -3,7 +3,8 @@ const express = require('express');
 const app = express();
 const path= require('path')
 const RouteMain= require('./routes/main')
-const RouteProduct= require('./routes/products')
+const RouteProducts = require('./routes/products')
+
 const publicPath= path.resolve(__dirname, '/public')
 
 
@@ -19,7 +20,10 @@ app.set('views engine', 'ejs');
 
 app.use('/', RouteMain);
 
-//app.use('/producto', RouteProduct);
+//Routes Products
+app.use('/products', RouteProducts)
+
+
 
 
 //app.use(express.json());
