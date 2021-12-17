@@ -1,18 +1,25 @@
 {
-  "name": "intertec",
+  "name": "intertec1-",
   "version": "1.0.0",
+  "description": "comandos git a usar:",
   "main": "app.js",
   "scripts": {
-    "star": "nodemon app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CasanovaEric/Intertec1-.git"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CasanovaEric/Intertec1-/issues"
+  },
+  "homepage": "https://github.com/CasanovaEric/Intertec1-#readme",
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "node": "^17.2.0",
     "nodemon": "^2.0.15"
-  },
-  "devDependencies": {},
-  "description": ""
+  }
 }
