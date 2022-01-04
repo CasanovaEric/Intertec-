@@ -18,7 +18,6 @@ router.get('/register', mainController.register);
 
 router.get('/confirm-order', mainController.confirmOrder);
 
-router.get('/productos', mainController.productos)
 
 router.get('/carrito', mainController.carrito)
 

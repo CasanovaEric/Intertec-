@@ -5,28 +5,31 @@ const app = express ()
 const publicPath = path.resolve (__dirname, "./public") 
 app.use(express.static(publicPath))
 
-app.listen(4000, () => 
-console.log("Houston todo en orden en el puerto"))
+//Methods 
+app.listen(process.env.PORT || 3000, function() {
+    
+    console.log('Servidor corriendo en puerto 3000');
+});
+//METHOD USED
+app.use(express.static('public'));
 
-app.get("/", (req, res) => { 
-    res.sendFile(path.join(__dirname + "/views/index.html"))
-})
+app.set('views engine', 'ejs');
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
+app.use('/', RouteMain);
 
-app.get("/bateria", (req, res) => { 
-    res.sendFile(path.join(__dirname + "/views/bateria.html"))
-})
+//"ROUTER PRODUCTS"
+app.use('/', RouteProducts);
+app.use('/products', RouteProducts);
 
-app.get("/registro", (req, res) => { 
-    res.sendFile(path.join(__dirname + "/views/registro.html"))
-})
+//app.use('/products/:id', RouteProducts);
+app.use('/products/detailsProducts', RouteProducts);
+app.use('/products/detailsProducts/:id', RouteProducts);
 
-app.get("/confirmar-orden", (req, res) => { 
-    res.sendFile(path.join(__dirname + "/views/confirmar-orden.html"))
-})
 
-app.get("/carrito", (req, res) => { 
-    res.sendFile(path.join(__dirname + "/views/carrito.html"))
-})
+
+
+
 
 app.get("/motog60s", (req, res) => { 
     res.sendFile(path.join(__dirname + "/views/motog60s.html"))

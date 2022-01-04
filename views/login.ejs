@@ -1,23 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-
 <!--'include Head'-->
 <%- include('partials/head' ,{title: 'login'} )%>
 
-<body>
+<body class="fondo">
     <!--'include headerNavBar'-->
     <%- include('partials/headerNavBar') %>
-    
+
     <main class="login">
         <form action="/" method="POST">
             <input type="text" name="user" placeholder="Nombre de usuario">
             <input type="password" name="pass" placeholder="Elegí tu contraseña">
             <input type="submit" value="Enviar">
         </form>
-     </main>
+    </main>
 
 </body>
-     <!--'include footer'-->
+<!--'include footer'-->
 <%- include('partials/footer') %>
 
 

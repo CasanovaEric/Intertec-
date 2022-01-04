@@ -1,248 +1,267 @@
-.fondo {background-color: black;}
+.fondo {
+   margin: 0%;
+    background-color: black;
+}
 
-.naranja { background-color: orange;
+.naranja {
+    background-color: orange;
     width: 100%;
+  
 }
 
 
 
-.banner { text-align: center;}
+.banner {
+    text-align: center;
+}
 
-h1 { color: white;}
-h4 { color: white;}
+h1 {
+    color: white;
+}
 
-.cabecera1 { 
-    display:flex;
-    flex-direction:column;
-    flex-wrap:wrap;
-    justify-content:flex-start;
-    align-items:unset;
-    align-content:center;
-  }
+h4 {
+    color: white;
+}
 
-  .logo {   
-    order:0;
-  flex:0 1 auto;
-  align-self:auto;
-  height:auto;
-  width:auto;
-  margin: auto;
-  margin-top: 10px;
+.cabecera1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: unset;
+    align-content: center;
+}
+
+.logo {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    height: auto;
+    width: auto;
+    margin: auto;
+    margin-top: 10px;
 }
 
 
-  .barra { 
-    order:0;
-    flex:0 1 auto;
-    align-self:auto;
-    height:auto;
-    width:auto;
+.barra {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    height: auto;
+    width: auto;
     margin: auto;
     margin-top: 15px;
-    
+
 }
 
 
 
-.cabecera2 { 
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content:flex-end;
-    align-items:unset;
-    align-content:flex-start;
+.cabecera2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: unset;
+    align-content: flex-start;
 }
 
-.cabecera2 a { 
+.cabecera2 a {
     text-decoration: none;
     color: white;
-    font-family: 'Lato', sans-serif; 
+    font-family: 'Lato', sans-serif;
     font-size: 20px;
 
 }
+
 .register {
-    order:0;
-    flex:0 1 auto;
-    align-self:auto;
-    height:auto;
-    width:auto;
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    height: auto;
+    width: auto;
     margin-left: 10px;
 }
 
-.login {   
-    order:0;
-  flex:0 1 auto;
-  align-self:auto;
-  height:auto;
-  width:auto;
-  margin-left: 10px ;
-  margin-right: 10px;
+.login {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    height: auto;
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-.carrito {  
-    order:0;
-  flex:0 1 auto;
-  align-self:auto;
-  height:auto;
-  width:auto;
-  margin-left: 10px;
+.carrito {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    height: auto;
+    width: auto;
+    margin-left: 10px;
 }
 
-.contenedor-dos {     display:flex;
-    flex-direction:row;
-    flex-wrap:nowrap;
-    justify-content:center;
-    align-items:stretch;
-    align-content:center;
+.contenedor-dos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
 
 }
 
 .smartphones {
-    order:0;
-    flex:0 1 auto;
-    align-self:auto;
-    height:auto;
-    width:auto;
-}    
-
-.auriculares {   order:0;
-    flex:0 1 auto;
-    align-self:auto;
-    height:auto;
-    width:auto;
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    height: auto;
+    width: auto;
 }
 
-.accesorios { order:0;
-    flex:0 1 auto;
-    align-self:auto;
-    height:auto;
-    width:auto;
+.auriculares {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    height: auto;
+    width: auto;
 }
 
-.promociones {  
-    order:0;
-    flex:0 1 auto;
-    align-self:auto;
-    height:auto;
-    width:auto;
+.accesorios {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    height: auto;
+    width: auto;
 }
 
-.todo {  
-    order:0;
-    flex:0 1 auto;
-    align-self:auto;
-    height:auto;
-    width:auto;;
+.promociones {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    height: auto;
+    width: auto;
 }
 
-.contenedor-tres { 
-    display:flex;
-    flex-direction:row;
-    flex-wrap:nowrap;
-    justify-content:flex-start;
-    align-items:center;
-    align-content:center;
+.todo {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    height: auto;
+    width: auto;
+    ;
 }
 
-.bateria { 
-    order:0;
-    flex:0 1 auto;
-    align-self:auto;
-    height:auto;
-    width:auto;
+.contenedor-tres {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
 }
 
-.camara { 
-    order:0;
-  flex:0 1 auto;
-  align-self:auto;
-  height:auto;
-  width:auto;;
+.bateria {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    height: auto;
+    width: auto;
 }
 
-.precio { 
-    order:0;
-  flex:0 1 auto;
-  align-self:auto;
-  height:auto;
-  width:auto;
+.camara {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    height: auto;
+    width: auto;
+    ;
 }
 
-.pantalla { 
-    order:0;
-  flex:0 1 auto;
-  align-self:auto;
-  height:auto;
-  width:auto;
+.precio {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    height: auto;
+    width: auto;
 }
 
-.memoria { 
-    order:0;
-  flex:0 1 auto;
-  align-self:auto;
-  height:auto;
-  width:auto;
+.pantalla {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    height: auto;
+    width: auto;
 }
 
-.gaming { 
-    order:0;
-  flex:0 1 auto;
-  align-self:auto;
-  height:auto;
-  width:auto;
+.memoria {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    height: auto;
+    width: auto;
 }
 
-.contenedor-cuatro { 
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content:space-around;
-    align-items:unset;
-    align-content:flex-end;
+.gaming {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    height: auto;
+    width: auto;
 }
 
-.imagen-pie { 
-    order:0;
-    flex:0 1 auto;
-    align-self:auto;
-    height:auto;
-    width:auto;
+.contenedor-cuatro {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: unset;
+    align-content: flex-end;
 }
 
-.sobre-nosotros { 
-    order:0;
-    flex:0 1 auto;
-    align-self:auto;
-    height:auto;
-    width:auto; 
+.imagen-pie {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    height: auto;
+    width: auto;
 }
 
-.venta-online { 
-    order:0;
-    flex:0 1 auto;
-    align-self:auto;
-    height:auto;
-    width:auto;
- }
+.sobre-nosotros {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    height: auto;
+    width: auto;
+}
 
- .soporte { 
-    order:0;
-    flex:0 1 auto;
-    align-self:auto;
-    height:auto;
-    width:auto;
- }
+.venta-online {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    height: auto;
+    width: auto;
+}
 
-.navegacion { 
+.soporte {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    height: auto;
+    width: auto;
+}
+
+.navegacion {
     margin: auto;
     width: 500px;
 }
 
-ul, ol {
+ul,
+ol {
     list-style: none;
 }
 
-.desplegable li a { 
+.desplegable li a {
     background-color: white;
     color: black;
     text-decoration: none;
@@ -250,51 +269,60 @@ ul, ol {
     display: block;
 }
 
-.desplegable>li { 
+.desplegable>li {
     float: left;
 }
 
-.desplegable li a:hover { 
+.desplegable li a:hover {
     background-color: #FFA500;
 }
 
-.desplegable li ul { 
+.desplegable li ul {
     display: none;
     position: absolute;
     min-width: 140px;
 }
 
-.desplegable li:hover > ul {
-    display: block; 
+.desplegable li:hover>ul {
+    display: block;
 }
 
-.desplegable li ul li { 
+.desplegable li ul li {
     position: relative;
-    
+
 }
 
-.desplegable li ul li ul { 
+.desplegable li ul li ul {
     right: -140px;
     top: 0px;
 }
 
-h1  { font-family: 'Lato', sans-serif;}
-h4 { font-family: 'Lato', sans-serif;}
+h1 {
+    font-family: 'Lato', sans-serif;
+}
+
+h4 {
+    font-family: 'Lato', sans-serif;
+}
 
 
-.fondo2 { background-color: #FFA500;}
+.fondo2 {
+    background-color: #FFA500;
+}
 
-.fondo2 a { text-decoration: none;
-    font-family: 'Lato', sans-serif; 
-color: white;}
+.fondo2 a {
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    color: white;
+}
 
-h1 { margin-top: 30px;
+h1 {
+    margin-top: 30px;
     margin-bottom: 60px;
-text-align: center;}
+    text-align: center;
+}
 
-.logo-pie { margin-top: 15px;
-margin-bottom: 15px;}
-
+<<<<<<< HEAD
 
 .listauno { 
    background-color: white; 
@@ -615,3 +643,9 @@ margin-bottom: 80px;
  }
 
  
+=======
+HEAD .logo-pie {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+>>>>>>> 3cef78d1c11f8a7bec32358d03ef87d0a7bb8664

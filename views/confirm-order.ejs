@@ -2,56 +2,56 @@
 <!--'include Head'-->
 <%- include('partials/head' ,{title: 'confirm-order'} )%>
 
-<body>
+<body class="fondo">
     <!--'include headerNavBar'-->
 <%- include('partials/headerNavBar') %>
     <main class="flex-main flex-center">
         <div class="navegador w100 p10">
             <a></a>Seguir comprando
         </div>
-    <section class="flex-section flex-column flex-section-double">
-        
-        <h2>Completá tus datos</h2>
-        <div class="flex-section flex-center">
-            <div class="flex-section flex-column p10"> 
-                <label>Nombre*</label>
+        <section class="flex-section flex-column flex-section-double">
+
+            <h2>Completá tus datos</h2>
+            <div class="flex-section flex-center">
+                <div class="flex-section flex-column p10">
+                    <label>Nombre*</label>
+                    <input>
+                </div>
+                <div class="flex-section flex-column p10">
+                    <label>Apellido*</label>
+                    <input>
+                </div>
+            </div>
+            <div class="flex-section flex-column p10">
+                <label>Número de documento**</label>
                 <input>
             </div>
-            <div class="flex-section flex-column p10"> 
-                <label>Apellido*</label>
+            <div class="flex-section flex-column p10">
+                <label>País/Región</label>
                 <input>
             </div>
-        </div>
-        <div class="flex-section flex-column p10"> 
-            <label>Número de documento**</label>
-            <input>
-        </div>
-        <div class="flex-section flex-column p10"> 
-            <label>País/Región</label>
-            <input>
-        </div>
-        <div class="flex-section flex-column p10"> 
-            <label>Dirección</label>
-            <input>
-            <br>
-            <input>
-        </div>
-        <div class="flex-section flex-column p10"> 
-            <label>Localidad/Ciudad</label>
-            <input>
-        </div>
-        <div class="flex-section flex-column p10"> 
-            <label>Código Postal</label>
-            <input>
-        </div>
-        <div class="flex-section flex-column p10"> 
-            <label>Celular/WhatsApp</label>
-            <input>
-        </div>
-        <div class="flex-section flex-column p10"> 
-            <label>Correo Electrónico</label>
-            <input>
-        </div>
+            <div class="flex-section flex-column p10">
+                <label>Dirección</label>
+                <input>
+                <br>
+                <input>
+            </div>
+            <div class="flex-section flex-column p10">
+                <label>Localidad/Ciudad</label>
+                <input>
+            </div>
+            <div class="flex-section flex-column p10">
+                <label>Código Postal</label>
+                <input>
+            </div>
+            <div class="flex-section flex-column p10">
+                <label>Celular/WhatsApp</label>
+                <input>
+            </div>
+            <div class="flex-section flex-column p10">
+                <label>Correo Electrónico</label>
+                <input>
+            </div>
 
 
     </section>
@@ -94,7 +94,9 @@
             <input type="radio">
             <label class="pl10">PayPal</label>
         </div>
-        <div><button class="max-width20em" style="height:4em;float:right;">realizar el pedido</button></div>
+        <div>
+            <button class="max-width20em" style="height:4em;float:right;">realizar el pedido</button>
+        </div>
     </section>
 </section>
 </main>
