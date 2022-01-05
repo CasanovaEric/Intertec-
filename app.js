@@ -1,36 +1,32 @@
-//declarando constantes
+//Const 
 const express = require('express')
 const app = express();
 const path= require('path')
 const RouteMain= require('./routes/main')
+const RouteUser= require('./routes/user')
 const RouteProducts = require('./routes/products')
-
 const publicPath= path.resolve(__dirname, '/public')
 
 
-//metodos usados 
+//Method use 
 app.listen(process.env.PORT || 3000, function() {
     
     console.log('Servidor corriendo en puerto 3000');
 });
 
 app.use(express.static('public'));
-
 app.set('views engine', 'ejs');
+// app.use(express.urlencoded({extended: false}));
+// app.use(express.json());
 
+//Route Main
 app.use('/', RouteMain);
+
 
 //Routes Products
 app.use('/products', RouteProducts)
 
 
-
-
-//app.use(express.json());
-//app.use(express.urlencoded({extended: true}))
-// app.post('/', (req,res)=>{
-//     console.log(req.body);
-//     res.sendFile(__dirname + '/views/login.html');
-// });
-
+//Router users
+ app.use('/', RouteUser);
 

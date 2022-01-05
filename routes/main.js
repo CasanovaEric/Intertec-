@@ -1,6 +1,7 @@
-//declarando constantes
+//Const
 const express = require('express');
-const router= express.Router();
+const router = express.Router();
+const multer = require('multer');
 const mainController= require('../controllers/mainController');
 const path = require('path');
 
@@ -10,11 +11,6 @@ const options = {
 
 router.get('/', mainController.index);
 
-router.get('/login', mainController.login);
-router.post('/', mainController.index);
-
-
-router.get('/register', mainController.register);
 
 router.get('/confirm-order', mainController.confirmOrder);
 

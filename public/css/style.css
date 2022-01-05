@@ -1,9 +1,5 @@
-* {
-    margin: 0;
-    box-sizing: border-box;
-}
-
-html {
+.fondo {
+   margin: 0%;
     background-color: black;
     display: flex;
     flex-wrap: nowrap;
@@ -48,8 +44,7 @@ input {
     background-color: orange;
     height: auto;
     width: 100%;
-    top: 0;
-    left: 0;
+  
 }
 
 main {
@@ -369,8 +364,7 @@ ol {
 }
 
 
-
-.logo-pie {
-    margin-top: 15 px;
-    margin-bottom: 15 px;
+HEAD .logo-pie {
+    margin-top: 15px;
+    margin-bottom: 15px;
 }

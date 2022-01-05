@@ -1,23 +1,24 @@
 <!--'include Head'-->
 <%- include('partials/head' ,{title: 'register'} )%>
 
-<body>
+<body class="fondo">
 
     <!--'include headerNavBar'-->
     <%- include('partials/headerNavBar') %>
     <main class="register">
-        <form action="/" method="POST">
-            <input type="text" name="name" placeholder="Nombre y apellido">
+        <form action="/users/register" method="POST">
+            <input type="text" name="firstName" placeholder="Nombre y apellido">
+            <input type="text" name="lastName" placeholder= "apellido">
             <input type="text" name="user" placeholder="Nombre de usuario">
             <input type="email" name="email" placeholder="E-mail">
             <br>
             <br>
             <input type="date" name="birth_date" id="birth_date">
             <input type="text" name="addres" placeholder="Domicilio">
-            <input type="number" name="addres" placeholder="Codigo Postal">
+            <input type="number" name="zipCode" placeholder="Codigo Postal">
             <h4></h4>
-            <input type="password" name="pass" placeholder="Elegí tu contraseña">
-            <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña">
+            <input type="password" name="password" placeholder="Elegí tu contraseña">
+            <input type="password" name="passwordConfirm" placeholder="Confirmá tu contraseña">
             <input type="submit" value="Enviar">
             <input type="reset" value="Borrar">
             <br>
