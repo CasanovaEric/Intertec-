@@ -1,4 +1,4 @@
-//declarando constantes
+//Const
 const express = require('express');
 const router= express.Router();
 const mainController= require('../controllers/mainController');
@@ -10,11 +10,6 @@ const options = {
 
 router.get('/', mainController.index);
 
-router.get('/login', mainController.login);
-router.post('/', mainController.index);
-
-
-router.get('/register', mainController.register);
 
 router.get('/confirm-order', mainController.confirmOrder);
 

@@ -1,36 +1,32 @@
-//declarando constantes
-const { Router } = require('express');
-const express = require('express');
+//Const 
+const express = require('express')
 const app = express();
-const path= require('path');
-const RouteMain= require('./routes/main');
-const RouteProducts = require('./routes/products');
-const publicPath= path.resolve(__dirname, '/public');
+const path= require('path')
+const RouteMain= require('./routes/main')
+const RouteUser= require('./routes/user')
+const RouteProducts = require('./routes/products')
+const publicPath= path.resolve(__dirname, '/public')
 
 
-//Methods 
+//Method use 
 app.listen(process.env.PORT || 3000, function() {
     
     console.log('Servidor corriendo en puerto 3000');
 });
-//METHOD USED
-app.use(express.static('public'));
 
+app.use(express.static('public'));
 app.set('views engine', 'ejs');
-app.use(express.json());
-app.use(express.urlencoded({extended: false}));
+// app.use(express.urlencoded({extended: false}));
+// app.use(express.json());
+
+//Route Main
 app.use('/', RouteMain);
 
-//"ROUTER PRODUCTS"
-app.use('/', RouteProducts);
-app.use('/products', RouteProducts);
 
-//app.use('/products/:id', RouteProducts);
-app.use('/products/detailsProducts', RouteProducts);
-app.use('/products/detailsProducts/:id', RouteProducts);
+//Routes Products
+app.use('/products', RouteProducts)
 
 
-
-
-
+//Router users
+ app.use('/', RouteUser);
 
