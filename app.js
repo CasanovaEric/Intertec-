@@ -1,8 +1,10 @@
-const express = require ("express")
-const path = require("path")
-const app = express ()
-
-const publicPath = path.resolve (__dirname, "./public") 
+const { Router } = require('express');
+const express = require('express');
+const app = express();
+const path= require('path');
+const RouteMain= require('./routes/main');
+const RouteProducts = require('./routes/products');
+const publicPath= path.resolve(__dirname, '/public');
 app.use(express.static(publicPath))
 
 //Methods 

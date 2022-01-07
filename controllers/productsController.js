@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-/*const controller={
-    producto: (req, res)=>{
-        return res.render('../views/motog60s')
-    },
-=======
 const path = require('path');
 const fs= require('fs');
 
@@ -25,13 +19,8 @@ const controller={
 
 
 
->>>>>>> 3cef78d1c11f8a7bec32358d03ef87d0a7bb8664
 };
 
 
 //exportando moduloss
 module.exports= controller;
-<<<<<<< HEAD
-*/
-=======
->>>>>>> 3cef78d1c11f8a7bec32358d03ef87d0a7bb8664
