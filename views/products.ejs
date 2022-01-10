@@ -1,0 +1,27 @@
+<html>
+<!--'include Head'-->
+<%- include('partials/head' ,{title: 'products'} )%>
+
+<body class="fondo">
+    <!--'include headerNavBar'-->
+        <%- include('partials/headerNavBar') %>
+<table>
+    <% for(var i=0; i < data.length; i++) { %>
+        <tr>
+            <td style="color:white"><%= data[i].name %></td>
+            <td style="color:white"><%= data[i].price %></td>
+            <td style="color:white"><%= data[i].color %></td>
+        </tr>
+       <% } %>
+</table>
+        
+
+
+
+</body>
+
+<!--'include footer'-->
+<%- include('partials/footer') %>
+
+
+</html>

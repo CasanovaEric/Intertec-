@@ -22,7 +22,7 @@ app.use(express.urlencoded({extended: false}));
 app.use('/', RouteMain);
 
 //"ROUTER PRODUCTS"
-app.use('/', RouteProducts);
+//app.use('/', RouteProducts);
 app.use('/products', RouteProducts);
 
 //app.use('/products/:id', RouteProducts);
