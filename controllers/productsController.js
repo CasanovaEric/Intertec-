@@ -4,11 +4,12 @@ const fs= require('fs');
 
 
 const controller={
-   
-     index: (req,res)=>{
-          res.render('index.ejs')
-     },
-     
+     index: (req, res)=>{
+          var fs = require('fs');
+          var data = JSON.parse(fs.readFileSync('data/productDataBase.json', 'utf8'));
+          res.render('products.ejs', {data:data})
+    },
+
     detail: (req, res)=>{
          res.render('DetailsProducts.ejs')
 

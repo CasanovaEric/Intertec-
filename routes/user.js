@@ -14,6 +14,8 @@ router.get('/login', usersController.login);
 router.get('/register', usersController.register);
 router.get('/users/register', usersController.register);
 router.post('/users/register', usersController.create);
+router.post('/users/register', usersController.index);
+
 
 
 //Export Module

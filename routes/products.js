@@ -9,8 +9,8 @@ const options = {
     root: path.join(__dirname, '../views')
 };
 //Routes Products
-router.get('/products', productsController.index)
-router.get('/products/detailsProducts', productsController.detail)
+router.get('/', productsController.index);
+//router.get('/index', productsController.index);
 router.get('/create', productsController.create);
 router.get('/:id', productsController.detail);
 router.get('/detailsProducts', productsController.detail);
