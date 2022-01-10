@@ -326,3 +326,35 @@ HEAD .logo-pie {
     margin-top: 15px;
     margin-bottom: 15px;
 }
+
+.producto{
+    margin-bottom:10px;
+    color:white;
+    padding:15px;
+}
+
+.fichaProducto{
+    border-color:#ebebeb;
+    border-style: solid;
+    border-top-width: 1px;
+    padding:15px;
+    border-left: 0;
+    border-right: 0;
+    padding: 20px;
+}
+
+.producto img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    
+}
+
+section{
+    padding:15px;
+    display:flex;
+}
+
+.banner img{
+    width:100%;
+}
