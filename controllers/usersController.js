@@ -2,12 +2,11 @@ const path=require('path');
 const { runInNewContext } = require('vm');
 
 const controller= {
-     // index: (req, res)=>{
-     //      res.render('index.ejs')
-     //      },
-     
-    
-     register: (req, res)=>{
+     index: (req, res, next)=>{
+          res.render('./views/index.ejs')
+          next();
+     },
+      register: (req, res)=>{
          res.render('../views/register.ejs')
     },
 
@@ -27,8 +26,9 @@ const controller= {
           "password": req.body.password,
           "passwordConfirm": req.body.passwordConfirm
      };
-     res.send(req.body)
+     console.log(usuario);
      
+     res.render("hola")
      //Save Users
      
 

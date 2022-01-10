@@ -7,10 +7,11 @@ const controller= {
     confirmOrder: (req, res)=>{
         return res.render('../views/confirm-order.ejs')
     },
-
-    
     carrito: (req, res)=>{
         return res.render('../views/carrito.ejs')
+    },
+    products: (req, res)=>{
+        return res.render('../views/products.ejs')
     }
 }
 
