@@ -9,7 +9,7 @@
         <section>
     <% for(var i=0; i < data.length; i++) { %>
         <article class="producto">
-            <img src="images/img-cafetera-moulinex.jpg" width="350" height="350">
+            <img src="images/<%= data[i].image %>" width="350" height="350">
             <div class="fichaProducto">
                 <p class="precio">$<%= data[i].price %></p>
                 <p class="descripciones"><%= data[i].name %></p>
