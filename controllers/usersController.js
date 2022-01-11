@@ -1,9 +1,12 @@
+//"CONST FOR METHOD USE!"
 const path=require('path');
-const { runInNewContext } = require('vm');
+const fs= require('fs');
+const json_users= fs.readFileSync('./data/UsersDataBase.json', 'utf-8');
+const users = JSON.parse(json_users);
 
 const controller= {
      index: (req, res, next)=>{
-          res.render('./views/index.ejs')
+          res.render('index.ejs')
           next();
      },
       register: (req, res)=>{
@@ -11,26 +14,28 @@ const controller= {
     },
 
     login: (req, res)=>{
-         res.render('../views/login.ejs')
+         res.render('login.ejs')
     },
   
-    create: (req, res)=>{
-     let usuario= {
-          "firstName": req.body.firstName,
-          "lastName": req.body.lastName,
-          "user": req.body.user,
-          "email": req.body.email,
-          "age": req.body.birth_date,
-          "adress": req.body.adress,
-          "zipCode": req.body.zipcode,
-          "password": req.body.password,
-          "passwordConfirm": req.body.passwordConfirm
+    create: (req, res)=>{ 
+     let {firstName, lastName, userName, email, age, adress, zipcode, password, passwordConfirm}= req.body;
+     let user = {
+          firstName,
+          lastName,
+          userName,
+          email,
+          age,
+          adress,
+          zipcode,
+          password,
+          passwordConfirm,
      };
-     console.log(usuario);
-     
-     res.render("hola")
+     console.log(user);
+     users.push(user);
+     res.render("index.ejs")
      //Save Users
-     
+     const json_users = JSON.stringify(users);
+     fs.writeFileSync('./data/UsersDataBase.json', json_users, 'utf-8');
 
      //Route
      
@@ -38,5 +43,5 @@ const controller= {
     
 };
 
-//exportando modulo
+//"MODULE EXPORT"
 module.exports= controller;

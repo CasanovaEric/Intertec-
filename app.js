@@ -16,26 +16,16 @@ app.listen(process.env.PORT || 3000, function() {
 
 app.use(express.static('public'));
 app.set('views engine', 'ejs');
-
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 //"ROUTER PRODUCTS"
 //app.use('/', RouteProducts);
 app.use('/products', RouteProducts);
-
-//app.use('/products/:id', RouteProducts);
-app.use('/products/detailsProducts', RouteProducts);
-app.use('/products/detailsProducts/:id', RouteProducts);
-
 //Route Main
 app.use('/', RouteMain);
-
-
 //Routes Products
 app.use('/products', RouteProducts)
-
-
 //Router users
  app.use('/', RouteUser);
 
