@@ -5,15 +5,20 @@
 <body class="fondo">
     <!--'include headerNavBar'-->
         <%- include('partials/headerNavBar') %>
-<table>
+        <h2 class="titulares">Todos nuestros productos</h2>
+        <section>
     <% for(var i=0; i < data.length; i++) { %>
-        <tr>
-            <td style="color:white"><%= data[i].name %></td>
-            <td style="color:white"><%= data[i].price %></td>
-            <td style="color:white"><%= data[i].color %></td>
-        </tr>
+        <article class="producto">
+            <img src="images/<%= data[i].image %>" width="350" height="350">
+            <div class="fichaProducto">
+                <p class="precio">$<%= data[i].price %></p>
+                <p class="descripciones"><%= data[i].name %></p>
+                <p class="descuentos"><%= data[i].color %></p>
+            </div>
+        </article>
+    
        <% } %>
-</table>
+    </section>
         
 
 

@@ -16,9 +16,8 @@ app.listen(process.env.PORT || 3000, function() {
 
 app.use(express.static('public'));
 app.set('views engine', 'ejs');
-app.use(express.json());
 app.use(express.urlencoded({extended: false}));
-app.use('/', RouteMain);
+app.use(express.json());
 
 //"ROUTER PRODUCTS"
 //app.use('/', RouteProducts);
