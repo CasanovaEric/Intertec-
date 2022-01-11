@@ -16,7 +16,7 @@ const controller={
     },
     
     create: (req, res) => {
-		res.render('create-products-form.ejs');
+		res.render('create-product-form.ejs');
 	},
 
 
