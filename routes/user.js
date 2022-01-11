@@ -11,10 +11,11 @@ const options = {
 //Routes Users
 
 router.get('/login', usersController.login);
+router.post('/users/login', usersController.index);
+// router.get('/register', usersController.register);
 router.get('/register', usersController.register);
-router.get('/users/register', usersController.register);
-router.post('/users/register', usersController.create);
-router.post('/users/register', usersController.index);
+router.post('/', usersController.create);
+
 
 
 
