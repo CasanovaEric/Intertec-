@@ -18,13 +18,13 @@ const controller= {
     },
   
     create: (req, res)=>{ 
-     let {firstName, lastName, userName, email, age, adress, zipcode, password, passwordConfirm}= req.body;
+     let {firstName, lastName, userName, email, dateOfBirth, adress, zipcode, password, passwordConfirm}= req.body;
      let user = {
           firstName,
           lastName,
           userName,
           email,
-          age,
+          dateOfBirth,
           adress,
           zipcode,
           password,
@@ -32,11 +32,11 @@ const controller= {
      };
      console.log(user);
      users.push(user);
-     res.render("index.ejs")
+     
      //Save Users
      const json_users = JSON.stringify(users);
      fs.writeFileSync('./data/UsersDataBase.json', json_users, 'utf-8');
-
+     res.render("index.ejs")
      //Route
      
     },
