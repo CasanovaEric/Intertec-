@@ -3,17 +3,17 @@ const express = require('express');
 const router= express.Router();
 const usersController= require('../controllers/usersController');
 const path = require('path');
-const { check, body }= require('express-validator');
+const { body }= require('express-validator');
 const options = {
     root: path.join(__dirname, '../views')
 };
 
 //VALIDATE
 const validateForUsers= [
-    check('firstName').notEmpty().withMessage('Debes Completar el campo Nombre'),
-   check('lastName').notEmpty().withMessage('Debes Completar el campo Apellido'),
-    check('userName').notEmpty().withMessage('Debes Completar el campo Nombre de Usuario'),
-    check('email').isEmail().withMessage('Debes Completar el campo Nombre')
+    body('firstName').notEmpty().withMessage('Debes Completar el campo Nombre'),
+   body('lastName').notEmpty().withMessage('Debes Completar el campo Apellido'),
+    body('userName').notEmpty().withMessage('Debes Completar el campo Nombre de Usuario'),
+    body('email').isEmail().withMessage('Debes Completar el email')
 ];
 
 //Routes Users
