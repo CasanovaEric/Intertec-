@@ -44,6 +44,33 @@ const controller= {
      
     },
     
+    processLogin: (req, res) => {
+         let errors = validationResult(req);
+         if(errors.isEmpty()){
+              let usersJSON= fs.readFileSync('./data/UsersDataBase.json')
+              let users;
+              if(usersJSON == ""){
+                   users = [];
+              }else{
+                   users = JSON.parse(usersJSON);
+              }
+              for(let i = 0; i< users.length; i++){
+                   if(users[i].email == req.body.email) {
+                    //     if(bcrypt.compareSync(req.body.password, users[i].password))
+                        var usersLogin = users[i];
+                        break;
+                    };
+              }
+              if(usersLogin == undefined){
+                   return res.render('login.ejs', {errors: [{msg: 'credenciales invalidas'}]})
+              }
+              req.session.usersLogin = usersLogin;
+              res.render('index.ejs')
+
+         }else{
+              return res.render('login.ejs', {errors: errors.errors});
+         }
+    }
 };
 
 //"MODULE EXPORT"
