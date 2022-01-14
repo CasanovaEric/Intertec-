@@ -29,7 +29,26 @@ const validationsForUsers= [
    body('lastName').notEmpty().withMessage('Debes Completar el campo Apellido'),
     body('userName').notEmpty().withMessage('Debes Completar el campo Nombre de Usuario'),
     body('email').isEmail().withMessage('Debes Completar el email'),
-    body('password').notEmpty().withMessage('debes completar la contraseña'),
+    body('password').notEmpty().withMessage('Debes escribir una contraseña'),
+    body('dateOfBirth').notEmpty().withMessage('Debes agregar una fecha de nacimiento'),
+    body('address').notEmpty().withMessage('Debes agregar una direccion'),
+    body('Zipcode').notEmpty().withMessage('Debes agregar un codigo postal'),
+    body('passwordConfirm').notEmpty().withMessage('Debes  volver escribir la contraseña '),
+    body('uploadImage').custom((value,{req})=>{
+        let file = req.file;
+        let acceptedExtensions  = ['.jpg', '.png', '.gif'];
+        if (!file){
+            throw new Error('tienes que subir una imagen')
+        }else{
+            let fileExtension = path.extname(file.originalname);
+            if (!acceptedExtensions.includes(fileExtension)){
+                throw new Error(`las extensiones de archivo permitidias son ${acceptedExtensions.join(',')}`);
+    
+            }    
+        }
+        
+        return true;
+    })
 ];
 // VALIDATE FOR LOGIN
 const validationsLogin = [
@@ -43,7 +62,7 @@ router.get('/login', usersController.login);
  router.post('/users/login', validationsLogin, usersController.processLogin);
 // router.get('/register', usersController.register);
 router.get('/register', guestMiddleware,usersController.register);
-router.post('/', uploadFile.single('avatar'),  validationsForUsers, usersController.create);
+router.post('/', uploadFile.single('uploadImage'),  validationsForUsers, usersController.create);
 
 
 

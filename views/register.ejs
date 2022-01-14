@@ -21,13 +21,13 @@
             <br>
             <br>
             <input type="date" name="dateOfBirth" id="birth_date">
-            <input type="text" name="addres" placeholder="Domicilio">
-            <input type="number" name="zipCode" placeholder="Codigo Postal">
+            <input type="text" name="addres" value="<%= locals.old && old.addres ? old.addres : '' %>" placeholder="Domicilio">
+            <input type="number" name="zipCode"  value="<%= locals.old && old.zipCode ? old.zipCode : '' %>" placeholder="Codigo Postal">
             <h4></h4>
             <input type="password" name="password" placeholder="Elegí tu contraseña">
             <input type="password" name="passwordConfirm" placeholder="Confirmá tu contraseña">
             <br>
-            <label name="upload" class="errors">Subir imagen<input type="file" name="avatar"></label>
+            <label name="upload" class="errors">Subir imagen<input type="file" name="uploadImage"></label>
             <br>
             <input type="submit" value="Enviar">
             <input type="reset" value="Borrar">
