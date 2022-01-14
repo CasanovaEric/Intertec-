@@ -4,30 +4,46 @@ const router= express.Router();
 const usersController= require('../controllers/usersController');
 const path = require('path');
 const { body, check }= require('express-validator');
+const multer = require('multer')
 const guestMiddleware = require('../middleware/guestMiddleware');
 const authMiddleware = require('../middleware/authMiddleware');
 const options = {
     root: path.join(__dirname, '../views')
 };
 
+//STORAGE MULTER
+const storage= multer.diskStorage({
+    destination: (req, file, cb) => {
+    cb(null, './public/images/users');
+    },
+    filename:(req, file, cb) => {
+        let fileName = `${Date.now()}_img${path.extname(file.originalname)}`;
+        cb(null, fileName);
+    }
+})
+
+const uploadFile = multer({storage});
 //VALIDATE
-const validateForUsers= [
+const validationsForUsers= [
     body('firstName').notEmpty().withMessage('Debes Completar el campo Nombre'),
    body('lastName').notEmpty().withMessage('Debes Completar el campo Apellido'),
     body('userName').notEmpty().withMessage('Debes Completar el campo Nombre de Usuario'),
-    body('email').isEmail().withMessage('Debes Completar el email')
+    body('email').isEmail().withMessage('Debes Completar el email'),
+    body('password').notEmpty().withMessage('debes completar la contraseña'),
 ];
+// VALIDATE FOR LOGIN
+const validationsLogin = [
+    check('email').isEmail().withMessage('Email invalido'),
+    check('password').isLength({min: 8}).withMessage('la contraseña debe tener al menos 8 caracteres')
 
+]; 
 //Routes Users
 
 router.get('/login', usersController.login);
- router.post('/users/login',[check('email').isEmail().withMessage('Email invalido'),
- check('password').isLength({min: 8}).withMessage('la contraseña debe tener al menos 8 caracteres')
-
- ] ,usersController.processLogin);
+ router.post('/users/login', validationsLogin, usersController.processLogin);
 // router.get('/register', usersController.register);
 router.get('/register', guestMiddleware,usersController.register);
-router.post('/', validateForUsers, usersController.create);
+router.post('/', uploadFile.single('avatar'),  validationsForUsers, usersController.create);
 
 
 

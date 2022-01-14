@@ -34,13 +34,6 @@ const controller= {
                    errors: errors.array(),
                     old: req.body});
          }
-     // let user = req.body;
-     // users.push(user);
-     // //Save Users
-     // const json_users = JSON.stringify(users);
-     // fs.writeFileSync('./data/UsersDataBase.json', json_users, 'utf-8');
-     // res.render("index.ejs")
-     //Route
      
     },
     
