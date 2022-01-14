@@ -1,1 +1,43 @@
-[{"firstName":"carlos","lastName":"martinez","userName":"aldsko[","email":"asdf@gmail.com","password":"16541","passwordConfirm":"165165"},{"firstName":"a55","lastName":"aaall","userName":"llllllo","email":"lllolo@gmail.com","password":"456","passwordConfirm":"987"},{"firstName":"carlos","lastName":"martinez","userName":"carlosAdmi","email":"carlosadmi@gmail.com","password":"123456","passwordConfirm":"123456"},{"firstName":"","lastName":"","userName":"","email":"","password":"","passwordConfirm":""}]
+[
+    {
+        "firstName": "carlos",
+        "lastName": "martinez",
+        "userName": "aldsko[",
+        "email": "asdf@gmail.com",
+        "password": "16541",
+        "passwordConfirm": "165165"
+    },
+    {
+        "firstName": "enrique",
+        "lastName": "espinoza",
+        "userName": "enriquem",
+        "email": "enrique@gmail.com",
+        "dateOfBirth": "",
+        "addres": "",
+        "zipCode": "",
+        "password": "123456789",
+        "passwordConfirm": "123456789"
+    },
+    {
+        "firstName": "enrique",
+        "lastName": "martinex",
+        "userName": "userErnqieur",
+        "email": "enrique123@gmail.com",
+        "dateOfBirth": "",
+        "addres": "",
+        "zipCode": "",
+        "password": "123456789",
+        "passwordConfirm": "123456789"
+    },
+    {
+        "firstName": "jose",
+        "lastName": "perez",
+        "userName": "JoseUsers",
+        "email": "jose@gmail.com",
+        "dateOfBirth": "2022-05-11",
+        "addres": "jose concha 2112",
+        "zipCode": "1561651651",
+        "password": "12345678",
+        "passwordConfirm": "12345678"
+    }
+]
