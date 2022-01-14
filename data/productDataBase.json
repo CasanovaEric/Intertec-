@@ -1,0 +1,19 @@
+[
+    {
+    "id": "1",
+    "name":"Motorola G9 Plus" ,
+    "price": "35499",
+    "image":"motog9plus.jpg" ,
+    "category": "Smartphone",
+    "color": "Blue" 
+    },
+    {
+        "id": "2",
+        "name":"Motorola G10 Plus" ,
+        "price": "55499",
+        "image":"motog9plus.jpg" ,
+        "category": "Smartphone",
+        "color": "Black" 
+        }
+
+]

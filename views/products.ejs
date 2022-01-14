@@ -1,0 +1,32 @@
+<html>
+<!--'include Head'-->
+<%- include('partials/head' ,{title: 'products'} )%>
+
+<body class="fondo">
+    <!--'include headerNavBar'-->
+        <%- include('partials/headerNavBar') %>
+        <h2 class="titulares">Todos nuestros productos</h2>
+        <section>
+    <% for(var i=0; i < data.length; i++) { %>
+        <article class="producto">
+            <img src="images/<%= data[i].image %>" width="350" height="350">
+            <div class="fichaProducto">
+                <p class="precio">$<%= data[i].price %></p>
+                <p class="descripciones"><%= data[i].name %></p>
+                <p class="descuentos"><%= data[i].color %></p>
+            </div>
+        </article>
+    
+       <% } %>
+    </section>
+        
+
+
+
+</body>
+
+<!--'include footer'-->
+<%- include('partials/footer') %>
+
+
+</html>

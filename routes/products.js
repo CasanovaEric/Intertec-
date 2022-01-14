@@ -1,3 +1,4 @@
+//Const
 const express= require('express');
 const router= express.Router();
 const productsController= require('../controllers/productsController')
@@ -9,7 +10,6 @@ const options = {
 };
 //Routes Products
 router.get('/', productsController.index);
-router.get('/index', productsController.index);
 router.get('/create', productsController.create);
 router.get('/:id', productsController.detail);
 router.get('/detailsProducts', productsController.detail);
