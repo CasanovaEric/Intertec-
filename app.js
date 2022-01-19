@@ -1,11 +1,12 @@
 //Const 
-const express = require('express')
+const express = require('express');
 const app = express();
-const path= require('path')
-const RouteMain= require('./routes/main')
-const RouteUser= require('./routes/user')
-const RouteProducts = require('./routes/products')
-const publicPath= path.resolve(__dirname, '/public')
+const path= require('path');
+const RouteMain= require('./routes/main');
+const RouteUser= require('./routes/user');
+const RouteProducts = require('./routes/products');
+const publicPath= path.resolve(__dirname, '/public');
+const session = require('express-session');
 
 
 //Method use 
@@ -18,7 +19,7 @@ app.use(express.static('public'));
 app.set('views engine', 'ejs');
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
-
+app.use(session({secret: 'this is secret'}));
 //"ROUTER PRODUCTS"
 //app.use('/', RouteProducts);
 app.use('/products', RouteProducts);

@@ -5,11 +5,18 @@
     <!--'include headerNavBar'-->
     <%- include('partials/headerNavBar') %>
 
-    <main class="login">
+    <main class="login">.
+        <% if (locals.errors){
+            errors.forEach(function(error) { %>
+        <p class="errors"><%= error.msg %></p>
+        <% })
+            }
+         %>   
         <form action="/users/login" method="POST">
-            <input type="text" name="user" placeholder="Nombre de usuario">
-            <input type="password" name="pass" placeholder="Elegí tu contraseña">
-            <input type="submit" value="Enviar">
+            <input type="email" name="email" placeholder="email">
+            <input type="password" name="password" placeholder="contraseña">
+            <label class="errors"><input type="checkbox" class="errors" value="Recuerdame">Recuerdame</label><br>
+            <input type="submit" value="login">
         </form>
     </main>
 
