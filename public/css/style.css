@@ -9,7 +9,12 @@
   
 }
 
-
+.subtitulo-logo { 
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
 
 .banner {
     text-align: center;
@@ -44,26 +49,22 @@ h4 {
 
 
 .barra {
-    order: 0;
-    flex: 0 1 auto;
-    align-self: auto;
-    height: auto;
-    width: auto;
-    margin: auto;
-    margin-top: 15px;
+    text-align: center;
+    margin-bottom: 20px;
 
 }
 
 
 
 .cabecera2 {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: unset;
-    align-content: flex-start;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    align-content:flex-start;
 }
+
 
 .cabecera2 a {
     text-decoration: none;
@@ -72,39 +73,45 @@ h4 {
     font-size: 20px;
 
 }
-
 .register {
-    order: 0;
-    flex: 0 1 auto;
-    align-self: auto;
-    height: auto;
-    width: auto;
-    margin-left: 10px;
-}
+    order:0;
+    flex:0 1 auto;
+    align-self:auto;
+    height:auto;
+    width:auto;
+    margin-left: 35px;
+  }
+
+  .fa-user-plus{ 
+      margin-left: 5px;
+  }
 
 .login {
-    order: 0;
-    flex: 0 1 auto;
-    align-self: auto;
-    height: auto;
-    width: auto;
-    margin-left: 10px;
-    margin-right: 10px;
+    border:0;
+  flex:0 1 auto;
+  align-self:auto;
+  height:auto;
+  width:auto;
+    margin-left: 35px;
+}
+
+.fa-user { 
+    margin-left: 5px;
 }
 
 .carrito {
-    order: 0;
-    flex: 0 1 auto;
-    align-self: auto;
-    height: auto;
-    width: auto;
-    margin-left: 10px;
+    order:0;
+    flex:0 1 auto;
+    align-self:auto;
+    height:auto;
+    width:auto;
+  
 }
 
 .contenedor-dos {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap ;
     justify-content: center;
     align-items: stretch;
     align-content: center;
@@ -336,3 +343,40 @@ h1 {
 .errors{
  color: white;
 }
+
+.loginbars {
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    justify-content:center;
+    align-items:flex-start;
+    align-content:flex-start;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.barra-email{ 
+    display: block;
+    order:0;
+    flex:0 1 auto;
+    align-self:auto;
+    height:auto;
+    width:auto;
+    
+}
+
+.barra-pass {
+    display: block;
+    order:0;
+    flex:0 1 auto;
+    align-self:auto;
+    height:auto;
+    width:auto;
+}
+
+.boton-log {  
+    order:0;
+    flex:0 1 auto;
+    align-self:auto;
+    height:auto;
+    width:auto;}
