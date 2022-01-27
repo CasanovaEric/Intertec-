@@ -5,8 +5,10 @@ const path= require('path');
 const RouteMain= require('./routes/main');
 const RouteUser= require('./routes/user');
 const RouteProducts = require('./routes/products');
-const publicPath= path.resolve(__dirname, '/public');
+const publicPath = path.resolve(__dirname, '/public');
+const cookieParser = require('cookie-parser');
 const session = require('express-session');
+const remembermeMiddleware = require('./middleware/RemembermeMiddleware');
 
 
 //Method use 
@@ -19,6 +21,8 @@ app.use(express.static('public'));
 app.set('views engine', 'ejs');
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
+app.use(cookieParser());
+app.use(remembermeMiddleware);
 app.use(session({secret: 'this is secret'}));
 //"ROUTER PRODUCTS"
 //app.use('/', RouteProducts);
