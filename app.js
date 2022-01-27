@@ -30,3 +30,6 @@ app.use('/products', RouteProducts)
 //Router users
  app.use('/', RouteUser);
 
+app.get("/motog60s", (req, res) => { 
+    res.sendFile(path.join(__dirname + "/views/motog60s.html"))
+})
