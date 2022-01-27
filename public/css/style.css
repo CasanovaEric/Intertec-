@@ -47,22 +47,50 @@ h4 {
     margin-top: 10px;
 }
 
+#input-search{
+    max-width: 1400px;
+    text-rendering: auto;
+    color: black;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    cursor: text;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    margin: 0 0 0 11em;
+    padding: 3px 7px;
+    border-width: 2px;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+}
+
 
 .barra {
-    text-align: center;
-    margin-bottom: 20px;
-
+    order: 0;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    justify-content: space-around;
+    height: auto;
+    max-width: 1400px;
+    margin: unset;
+    padding: 15px;
+    align-items:unset;
 }
 
 
 
 .cabecera2 {
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content:center;
-    align-items:center;
-    align-content:flex-start;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: unset;
+    align-content: flex-start;
+    width: auto;
 }
 
 
@@ -74,38 +102,31 @@ h4 {
 
 }
 .register {
-    order:0;
-    flex:0 1 auto;
-    align-self:auto;
-    height:auto;
-    width:auto;
-    margin-left: 35px;
-  }
-
-  .fa-user-plus{ 
-      margin-left: 5px;
-  }
-
-.login {
-    border:0;
-  flex:0 1 auto;
-  align-self:auto;
-  height:auto;
-  width:auto;
-    margin-left: 35px;
-}
-
-.fa-user { 
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    height: auto;
+    width: auto;
     margin-left: 5px;
 }
 
+.login {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    height: auto;
+    width: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
 .carrito {
-    order:0;
-    flex:0 1 auto;
-    align-self:auto;
-    height:auto;
-    width:auto;
-  
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    height: auto;
+    width: auto;
+    margin-left: 5px;
 }
 
 .contenedor-dos {
@@ -218,12 +239,13 @@ h4 {
 }
 
 .contenedor-cuatro {
-    display: flex;
+    display:flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-around;
-    align-items: unset;
-    align-content: flex-end;
+    align-items: center;
+    align-content: space-around;
+
 }
 
 .imagen-pie {
@@ -234,29 +256,24 @@ h4 {
     width: auto;
 }
 
-.sobre-nosotros {
-    order: 0;
-    flex: 0 1 auto;
-    align-self: auto;
-    height: auto;
-    width: auto;
+.logo-pie{
+    width: 90px;
+    height: 95px;
+    align-items: flex-start;
 }
 
-.venta-online {
-    order: 0;
-    flex: 0 1 auto;
+.sobre-nosotros,
+.venta-online,
+.soporte  {
     align-self: auto;
-    height: auto;
-    width: auto;
+    height: 95px;
+    width: 90px;
+    font-size: 10px;
+    text-align:center;
+    padding: 10px;
+    text-align:justify;
 }
 
-.soporte {
-    order: 0;
-    flex: 0 1 auto;
-    align-self: auto;
-    height: auto;
-    width: auto;
-}
 
 .navegacion {
     margin: auto;
@@ -273,7 +290,8 @@ ol {
     color: black;
     text-decoration: none;
     padding: 10px 15px;
-    display: block;
+    display: flex;
+    box-sizing: border-box;
 }
 
 .desplegable>li {
@@ -310,6 +328,9 @@ h1 {
 
 h4 {
     font-family: 'Lato', sans-serif;
+    text-align:end;
+    font-size: 1.3em;
+    margin-bottom: 0.2px;
 }
 
 
@@ -321,6 +342,8 @@ h4 {
     text-decoration: none;
     font-family: 'Lato', sans-serif;
     color: white;
+    font-size: 0.5em;
+
 }
 
 h1 {
@@ -344,39 +367,40 @@ h1 {
  color: white;
 }
 
-.loginbars {
-    display:flex;
-    flex-direction:row;
+p {
+    display: block;
+    margin-block-start: .3em;
+    margin-block-end: .3em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-align: center;
+}
+
+
+footer{
+    margin: 25px;
+}
+
+
+.sociales{
+    width: 260px;
+    margin: auto;
+    padding: 10px;
+    display: flex;
     flex-wrap:nowrap;
-    justify-content:center;
-    align-items:flex-start;
-    align-content:flex-start;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    justify-content: space-around;
+    align-items:center;
 }
 
-.barra-email{ 
-    display: block;
-    order:0;
-    flex:0 1 auto;
-    align-self:auto;
-    height:auto;
-    width:auto;
-    
+.social_1:hover{
+    transform: rotate(30deg);
+    transition: all 0.5s;
 }
-
-.barra-pass {
-    display: block;
-    order:0;
-    flex:0 1 auto;
-    align-self:auto;
-    height:auto;
-    width:auto;
+.social_2:hover{
+    transform: rotate(30deg);
+    transition: all 0.5s;
 }
-
-.boton-log {  
-    order:0;
-    flex:0 1 auto;
-    align-self:auto;
-    height:auto;
-    width:auto;}
+.social_3:hover{
+    transform: rotate(30deg);
+    transition: all 0.5s;
+}
