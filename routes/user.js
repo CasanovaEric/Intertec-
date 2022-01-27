@@ -56,7 +56,7 @@ const validationsLogin = [
     check('password').isLength({min: 8}).withMessage('la contraseña debe tener al menos 8 caracteres')
 
 ]; 
-//Routes Users
+//Routes Users/Logins
 
 router.get('/login', usersController.login);
  router.post('/users/login', validationsLogin, usersController.processLogin);
