@@ -59,14 +59,19 @@ const controller= {
                    users = JSON.parse(usersJSON);
               }
               let usersLogin
+              let password= req.body.password
+              
+              //hacer un FIND
               for(let i = 0; i< users.length; i++){
                    if(users[i].email == req.body.email) {
-                         if(bcrypt.compareSync(req.body.password, users[i].password))
+                        console.log(users[i])
+                         if(bcrypt.compare(password, users[i].password)){
                          usersLogin = users[i];
-                        break;
+                         console.log('password ok')
+                        break;}
                     };
               }
-              if(usersLogin != undefined){
+              if(!usersLogin){
                    return res.render('login.ejs', {errors: [{msg: 'credenciales invalidas'}]})
               }
               req.session.usersLogin = usersLogin;

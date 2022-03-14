@@ -88,5 +88,13 @@
         "email": "carlosMartinez@gmail.com",
         "password": "$2a$10$auFC4FOkzL3.BTnXWL.E4Ois1u1pumBMYR2dT5eNpK4KD8ShwVWbu",
         "passwordConfirm": "$2a$10$IKdPnJlkKucRRI7HL//qZ.s1DSM8qXuboKY3.12uNDxCJTzptNIY6"
+    },
+    {
+        "firstName": "jose",
+        "lastName": "gonzale",
+        "userName": "josegonzales",
+        "email": "josegonzales@hotmail.com",
+        "password": "$2a$10$MYuaQT9/3tIvrnM/c1VCZukNV0Ow3/.vvSJCyI1C9is6CZMDzbNuW",
+        "passwordConfirm": "$2a$10$O54rL7dWGmx0uSIiUfeS7OoF3nW3RGaIgkZR1G39aMyIMQCv4Qzg6"
     }
 ]
