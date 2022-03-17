@@ -10,9 +10,9 @@ const session = require('express-session');
 
 
 //Method use 
-app.listen(process.env.PORT || 5000, function() {
+app.listen(process.env.PORT || 3000, function() {
     
-    console.log('Servidor corriendo en puerto 5000');
+    console.log('Servidor corriendo en puerto 3000');
 });
 
 app.use(express.static('public'));
@@ -26,7 +26,7 @@ app.use('/products', RouteProducts);
 //Route Main
 app.use('/', RouteMain);
 //Routes Products
-app.use('/products', RouteProducts)
+app.use('/products', RouteProducts);
 //Router users
- app.use('/', RouteUser);
+app.use('/', RouteUser);
 
