@@ -4,12 +4,17 @@
 }
 
 .naranja {
-    background-color: orange;
+    background-color: #ffa500;
     width: 100%;
   
 }
 
-
+.subtitulo-logo { 
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
 
 .banner {
     text-align: center;
@@ -88,6 +93,7 @@ h4 {
     width: auto;
 }
 
+
 .cabecera2 a {
     text-decoration: none;
     color: white;
@@ -95,7 +101,6 @@ h4 {
     font-size: 20px;
 
 }
-
 .register {
     order: 0;
     flex: 0 1 auto;
@@ -127,7 +132,7 @@ h4 {
 .contenedor-dos {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap ;
     justify-content: center;
     align-items: stretch;
     align-content: center;
@@ -248,25 +253,52 @@ h4 {
     flex: 0 1 auto;
     align-self: auto;
     height: auto;
+    width: 50px;
+}
+
+
+.sobre-nosotros { 
+    font-size: 20px;
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    height: auto;
     width: auto;
 }
 
-.logo-pie{
-    width: 90px;
-    height: 95px;
-    align-items: flex-start;
+.sobre-nosotros ul li a {
+    font-size: 16px; 
+    font-family: 'Lato', sans-serif;
 }
 
-.sobre-nosotros,
-.venta-online,
-.soporte  {
+.venta-online { 
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    order: 0;
+    flex: 0 1 auto;
     align-self: auto;
-    height: 95px;
-    width: 90px;
-    font-size: 10px;
-    text-align:center;
-    padding: 10px;
-    text-align:justify;
+    height: auto;
+    width: auto;
+}
+
+.venta-online ul li a {
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+
+
+.soporte  {
+   font-size: 20px;
+   order: 0;
+   flex: 0 1 auto;
+   align-self: auto;
+   height: auto;
+   width: auto;
+}
+
+.soporte ul li a {
+    font-size: 16px;
+   
 }
 
 
@@ -347,9 +379,16 @@ h1 {
     text-align: center;
 }
 
-HEAD .logo-pie {
-    margin-top: 15px;
-    margin-bottom: 15px;
+
+.listauno { 
+   background-color: white; 
+   column-count: 4;
+   column-gap: 100px;
+   column-width: 10px;
+   padding: 10px;
+   margin-top:40px;
+   width: auto;
+   box-sizing: border-box;
 }
 .errors{
  color: white;

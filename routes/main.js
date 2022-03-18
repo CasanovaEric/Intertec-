@@ -33,7 +33,6 @@ router.get('/', mainController.index);
 router.get('/confirm-order', mainController.confirmOrder);
 
 
-
 router.get('/carrito', mainController.carrito)
 
 module.exports = router;

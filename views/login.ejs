@@ -11,17 +11,22 @@
         <p class="errors"><%= error.msg %></p>
         <% })
             }
-         %>   
+         %>  
+        <div class="loginbars">
         <form action="/users/login" method="POST">
-            <input type="email" name="email" placeholder="email">
-            <input type="password" name="password" placeholder="contraseña">
+           <div class="barra-email"> <input  type="email" name="email" placeholder="email"></div>
+            <div class="barra-pass"> <input  type="password" name="password" placeholder="contraseña"></div>
             <label class="errors"><input type="checkbox" class="errors" value="Recuerdame">Recuerdame</label><br>
-            <input type="submit" value="login">
+            <div class="boton-log"> <input  type="submit" value="login"> </div>
         </form>
+    </div>   
     </main>
 
+
+
 </body>
-<!--'include footer'-->
+
+    <!--'include footer'-->
 <%- include('partials/footer') %>
 
 
