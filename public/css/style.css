@@ -301,52 +301,65 @@ h4 {
    
 }
 
-
-.navegacion {
-    margin: auto;
-    width: 500px;
+*{  margin: 0;
+    padding: 0;
 }
 
-ul,
-ol {
-    list-style: none;
+
+.encabezado {
+    background: white;
 }
 
-.desplegable li a {
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    padding: 10px 15px;
+.encabezado nav { 
     display: flex;
-    box-sizing: border-box;
+    justify-content: space-around;
+    
 }
 
-.desplegable>li {
-    float: left;
+.encabezado nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
 }
 
-.desplegable li a:hover {
-    background-color: #FFA500;
+.encabezado a { text-decoration: none;
+font-size: 20px;
+color: black;
+padding: 12px 20px;
+display: block;}
+
+a:hover {
+    background-color: #ffa500;
 }
 
-.desplegable li ul {
-    display: none;
+.encabezado nav ul li ul { 
+    display: flex;
+    flex-direction: column;
+}
+
+.encabezado nav ul li ul {
     position: absolute;
-    min-width: 140px;
+background: white;
 }
 
-.desplegable li:hover>ul {
-    display: block;
-}
-
-.desplegable li ul li {
+.encabezado nav ul li ul li{ 
+    width: 180px;
     position: relative;
-
 }
 
-.desplegable li ul li ul {
-    right: -140px;
-    top: 0px;
+.encabezado nav ul li ul li ul {
+    position: absolute;
+    top: 0;
+    left:180px;
+}
+
+.encabezado nav ul li ul {
+    display:none
+}
+
+.encabezado nav ul li:hover > ul{
+    display: block;
+    
 }
 
 h1 {
@@ -494,7 +507,6 @@ opacity: 1;
 
 
 .container_info_compra { 
-    background-color: white;
     width: 800px;
     height: 700px;
     position: relative;
@@ -502,6 +514,10 @@ opacity: 1;
     padding: 80px;
     bottom: 950px;
 }
+.container_info_compra p {
+    color: white;
+} 
+
 
 .infoDeCompraImg1 {
     margin-top: 35px;
@@ -515,7 +531,7 @@ opacity: 1;
 
 .infoDeCompra1 {
     position: relative;
-    border-bottom: solid black 2px;
+    border-bottom: solid white 2px;
     font-family: 'Lato', sans-serif;
     bottom: 45px;
     font-size: 25px;
@@ -524,7 +540,7 @@ opacity: 1;
 .infoDeCompraImg{
     position: relative;
     bottom: 70px;
-    border-bottom: solid, black, 2px;
+    border-bottom: solid, white, 2px;
     
 }
 .bold {
@@ -548,7 +564,7 @@ opacity: 1;
     font-weight: 500;
     font-size: 20px;
     bottom: 15px;
-    border-top: solid, 2px, black;
+    border-top: solid, 2px, white;
 }
 
 
