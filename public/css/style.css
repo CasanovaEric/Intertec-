@@ -301,52 +301,65 @@ h4 {
    
 }
 
-
-.navegacion {
-    margin: auto;
-    width: 500px;
+*{  margin: 0;
+    padding: 0;
 }
 
-ul,
-ol {
-    list-style: none;
+
+.encabezado {
+    background: white;
 }
 
-.desplegable li a {
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    padding: 10px 15px;
+.encabezado nav { 
     display: flex;
-    box-sizing: border-box;
+    justify-content: space-around;
+    
 }
 
-.desplegable>li {
-    float: left;
+.encabezado nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
 }
 
-.desplegable li a:hover {
-    background-color: #FFA500;
+.encabezado a { text-decoration: none;
+font-size: 20px;
+color: black;
+padding: 12px 20px;
+display: block;}
+
+a:hover {
+    background-color: #ffa500;
 }
 
-.desplegable li ul {
-    display: none;
+.encabezado nav ul li ul { 
+    display: flex;
+    flex-direction: column;
+}
+
+.encabezado nav ul li ul {
     position: absolute;
-    min-width: 140px;
+background: white;
 }
 
-.desplegable li:hover>ul {
-    display: block;
-}
-
-.desplegable li ul li {
+.encabezado nav ul li ul li{ 
+    width: 180px;
     position: relative;
-
 }
 
-.desplegable li ul li ul {
-    right: -140px;
-    top: 0px;
+.encabezado nav ul li ul li ul {
+    position: absolute;
+    top: 0;
+    left:180px;
+}
+
+.encabezado nav ul li ul {
+    display:none
+}
+
+.encabezado nav ul li:hover > ul{
+    display: block;
+    
 }
 
 h1 {
@@ -430,4 +443,190 @@ footer{
 .social_3:hover{
     transform: rotate(30deg);
     transition: all 0.5s;
+}
+
+
+.container { 
+    width: 800px;
+    background-color: black;
+    padding: 30px;
+}
+
+ul.slider { 
+    position: relative;
+    width: 800px;
+    height: 800px;
+}
+
+ul.slider li  { 
+    position: absolute;
+    left: 0;
+    top:0;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+}
+
+ul.slider li img {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+}
+
+ul.slider li:first-child {
+    opacity: 0;
+}
+
+ul.slider li:target {
+opacity: 1;
+}
+
+
+.menu { 
+    text-align: center;
+    margin: 20px;
+}
+
+.menu li{ 
+    display: inline-block;
+    text-align: center;
+} 
+
+.menu li a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: grey;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    border-radius: 100%;
+}
+
+
+.container_info_compra { 
+    width: 800px;
+    height: 700px;
+    position: relative;
+    left: 950px;
+    padding: 80px;
+    bottom: 950px;
+}
+.container_info_compra p {
+    color: white;
+} 
+
+
+.infoDeCompraImg1 {
+    margin-top: 35px;
+    text-align: center;
+    margin-bottom: 35px;
+    position: relative;
+    bottom: 45px;
+
+}
+
+
+.infoDeCompra1 {
+    position: relative;
+    border-bottom: solid white 2px;
+    font-family: 'Lato', sans-serif;
+    bottom: 45px;
+    font-size: 25px;
+}
+
+.infoDeCompraImg{
+    position: relative;
+    bottom: 70px;
+    border-bottom: solid, white, 2px;
+    
+}
+.bold {
+    font-weight: bold;
+}
+
+
+.infoDeCompra2 { 
+    position: relative;
+    bottom: 10px;
+    left: 200px;
+    font-size: 20px;
+    font-weight: 200;
+    font-family: 'Lato', sans-serif;
+    
+}
+
+.infoDeCompra3 { 
+    position:relative;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    bottom: 15px;
+    border-top: solid, 2px, white;
+}
+
+
+.infoTarjetas { 
+    position: relative;
+    top: 50px;
+}
+.americanExpress {
+    border: solid, 2px, black;
+}
+
+.americanExpress img{
+    position: relative;
+    top: 15px;
+    left: 200px;
+    
+}
+
+.americanExpress p {
+    position: relative;
+    bottom: 20px;   
+    font-family: 'Lato', sans-serif;
+   
+}
+
+.visa img{
+    position: relative;
+    top: 15px;
+    left: 180px;
+}
+
+.visa p {
+    position: relative;
+    bottom: 10px;   
+    font-family: 'Lato', sans-serif;
+   
+}
+
+.mastercard {
+    margin-bottom: 20px;
+}
+.mastercard img{
+    position: relative;
+    top: 15px;
+    left: 200px;
+}
+
+.mastercard p {
+    position: relative;
+    bottom: 20px;  
+    font-family: 'Lato', sans-serif;
+   
+}
+
+
+.infog60s {
+    background-color: white;
+    width: 800px;
+    height: 700px;
+    text-align: center;
+    position: relative;
+    left: 500px;
+    bottom: 800px;
+    padding: 80px;
 }
