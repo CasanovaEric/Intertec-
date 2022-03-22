@@ -39,5 +39,62 @@
         "zipCode": "1561651651",
         "password": "12345678",
         "passwordConfirm": "12345678"
+    },
+    {
+        "firstName": "carlos",
+        "lastName": "martinez",
+        "userName": "carlos1",
+        "email": "jose@gmail.com",
+        "dateOfBirth": "1992-12-11",
+        "addres": "12346conde 11",
+        "zipCode": "114455555",
+        "password": "123456798",
+        "passwordConfirm": "123456789"
+    },
+    {
+        "firstName": "carlos",
+        "lastName": "martinez",
+        "userName": "carlosAdmi",
+        "email": "carlosadmi@gmail.com"
+    },
+    {
+        "firstName": "carlos",
+        "lastName": "martinez",
+        "userName": "carlosAdmi",
+        "email": "carlosadmi@gmail.com",
+        "password": "$2a$10$k4oms4x/4tJUsxuIZlwFgOvqd7n8Qux2gp.oo/UEMRaj1CTs91mTC",
+        "passwordConfirm": "$2a$10$kVxAfLhLv6tQXLtFXgtOOOWj8RonisSK6Wam0Qm.Ikwu2/F0mzoW6"
+    },
+    {
+        "firstName": "carlos",
+        "lastName": "martinez",
+        "userName": "carlosAdmi",
+        "email": "carlosadmi@gmail.com",
+        "password": "$2a$10$R2WLk0U53C4jmRdSkY0aHeUYKaWx4SMsSXThGqOzSt220a2P/Qv/m",
+        "passwordConfirm": "$2a$10$ylWw77pwWYm/J6xI8d3nB.mRVX3ys.3bjK0M2hIqpdj7jQ5j1olMy"
+    },
+    {
+        "firstName": "enrique",
+        "lastName": "martinez",
+        "userName": "enriqueAdmin",
+        "email": "enriqueadmin@gmail.com",
+        "password": "$2a$10$CZEateCI6WzNE8l7ECwz5eJK3EUmzBREJy221SgAAga106.ReL.Vm",
+        "passwordConfirm": "$2a$10$zgPu157tEveCGfsLN2M34ucn5bYamscE7NUFRn6bSUZuqA1/B5/Ai"
+    },
+    {
+        "firstName": "carlos",
+        "lastName": "martinez",
+        "userName": "CarlosMartinez",
+        "email": "carlosMartinez@gmail.com",
+        "password": "$2a$10$auFC4FOkzL3.BTnXWL.E4Ois1u1pumBMYR2dT5eNpK4KD8ShwVWbu",
+        "passwordConfirm": "$2a$10$IKdPnJlkKucRRI7HL//qZ.s1DSM8qXuboKY3.12uNDxCJTzptNIY6"
+    },
+    {
+        "firstName": "jose",
+        "lastName": "gonzale",
+        "userName": "josegonzales",
+        "email": "josegonzales@hotmail.com",
+        "password": "$2a$10$MYuaQT9/3tIvrnM/c1VCZukNV0Ow3/.vvSJCyI1C9is6CZMDzbNuW",
+        "passwordConfirm": "$2a$10$O54rL7dWGmx0uSIiUfeS7OoF3nW3RGaIgkZR1G39aMyIMQCv4Qzg6"
     }
 ]
