@@ -30,9 +30,9 @@ const validationsForUsers= [
     body('userName').notEmpty().withMessage('Debes Completar el campo Nombre de Usuario'),
     body('email').isEmail().withMessage('Debes Completar el email'),
     body('password').notEmpty().withMessage('Debes escribir una contraseña'),
-    body('dateOfBirth').notEmpty().withMessage('Debes agregar una fecha de nacimiento'),
-    body('address').notEmpty().withMessage('Debes agregar una direccion'),
-    body('Zipcode').notEmpty().withMessage('Debes agregar un codigo postal'),
+    //body('dateOfBirth').notEmpty().withMessage('Debes agregar una fecha de nacimiento'),
+    //body('address').notEmpty().withMessage('Debes agregar una direccion'),
+    //body('Zipcode').notEmpty().withMessage('Debes agregar un codigo postal'),
     body('passwordConfirm').notEmpty().withMessage('Debes  volver escribir la contraseña '),
     body('uploadImage').custom((value,{req})=>{
         let file = req.file;
@@ -56,7 +56,7 @@ const validationsLogin = [
     check('password').isLength({min: 8}).withMessage('la contraseña debe tener al menos 8 caracteres')
 
 ]; 
-//Routes Users
+//Routes Users/Logins
 
 router.get('/login', usersController.login);
  router.post('/users/login', validationsLogin, usersController.processLogin);
