@@ -30,6 +30,7 @@ app.use('/products', RouteProducts);
 //Route Main
 app.use('/', RouteMain);
 //Routes Products
+app.use('/products', RouteProducts);
 //Router users
- app.use('/', RouteUser);
+app.use('/', RouteUser);
 
