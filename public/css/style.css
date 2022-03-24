@@ -431,3 +431,8 @@ footer{
     transform: rotate(30deg);
     transition: all 0.5s;
 }
+
+.vendedor{
+    color: black;
+    
+}
