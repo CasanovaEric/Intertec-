@@ -1,10 +1,9 @@
 .fondo {
-   margin: 0%;
-    background-color: black;
+    background-color: skyblue;
 }
 
 .naranja {
-    background-color: #ffa500;
+    background-color: white;
     width: 100%;
   
 }
@@ -21,11 +20,11 @@
 }
 
 h1 {
-    color: white;
+    color: black;
 }
 
 h4 {
-    color: white;
+    color: black;
 }
 
 .cabecera1 {
@@ -91,16 +90,38 @@ h4 {
     align-items: unset;
     align-content: flex-start;
     width: auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 
 .cabecera2 a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-family: 'Lato', sans-serif;
     font-size: 20px;
-
 }
+
+.cabecera2 a:hover { 
+    color: #87ceeb;
+}
+
+.fa-shopping-cart { 
+    color: #87ceeb;
+    font-size: 20px;
+}
+
+.fa-user-plus { 
+    color: #87ceeb;
+    font-size: 20px;
+    margin-left: 8px;
+}
+.fa-user { 
+    color: #87ceeb;
+    font-size: 20px;
+    margin-left: 8px;
+}
+
 .register {
     order: 0;
     flex: 0 1 auto;
@@ -189,12 +210,19 @@ h4 {
     align-content: center;
 }
 
-.bateria {
+.contenedor-tres li { 
+    list-style: none;
+}
+.bateria  {
     order: 0;
     flex: 0 1 auto;
     align-self: auto;
     height: auto;
     width: auto;
+    color: white;
+    padding: 10px;
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
 }
 
 .camara {
@@ -238,6 +266,7 @@ h4 {
     width: auto;
 }
 
+
 .contenedor-cuatro {
     display:flex;
     flex-direction: row;
@@ -245,6 +274,9 @@ h4 {
     justify-content: space-around;
     align-items: center;
     align-content: space-around;
+    background-color: white;
+    padding: 30px;  
+    
 
 }
 
@@ -269,6 +301,8 @@ h4 {
 .sobre-nosotros ul li a {
     font-size: 16px; 
     font-family: 'Lato', sans-serif;
+    color: black;
+    font-weight: bold;
 }
 
 .venta-online { 
@@ -279,11 +313,15 @@ h4 {
     align-self: auto;
     height: auto;
     width: auto;
+    color: black;
+    font-weight: bold;
 }
 
 .venta-online ul li a {
     font-size: 16px;
     font-family: 'Lato', sans-serif;
+    color: black;
+    font-weight: bold;
 }
 
 
@@ -294,10 +332,13 @@ h4 {
    align-self: auto;
    height: auto;
    width: auto;
+  
 }
 
 .soporte ul li a {
     font-size: 16px;
+    color: black;
+    font-weight: bold;
    
 }
 
@@ -307,7 +348,8 @@ h4 {
 
 
 .encabezado {
-    background: white;
+    background: black;
+    margin-bottom: 30px;
 }
 
 .encabezado nav { 
@@ -324,12 +366,15 @@ h4 {
 
 .encabezado a { text-decoration: none;
 font-size: 20px;
-color: black;
+color: white;
 padding: 12px 20px;
-display: block;}
+display: block;
+margin-bottom: 10px;
 
-a:hover {
-    background-color: #ffa500;
+}
+
+.encabezado a:hover {
+    background-color: #87ceeb;
 }
 
 .encabezado nav ul li ul { 
@@ -339,7 +384,7 @@ a:hover {
 
 .encabezado nav ul li ul {
     position: absolute;
-background: white;
+background: black;
 }
 
 .encabezado nav ul li ul li{ 
@@ -433,29 +478,33 @@ footer{
 }
 
 .social_1:hover{
-    transform: rotate(30deg);
+    transform: rotate(360deg);
     transition: all 0.5s;
 }
 .social_2:hover{
-    transform: rotate(30deg);
+    transform: rotate(360deg);
     transition: all 0.5s;
 }
 .social_3:hover{
-    transform: rotate(30deg);
+    transform: rotate(360deg);
     transition: all 0.5s;
 }
 
 
 .container { 
     width: 800px;
-    background-color: black;
     padding: 30px;
+    box-sizing: border-box;
 }
+
+
 
 ul.slider { 
     position: relative;
     width: 800px;
     height: 800px;
+    z-index: -1;
+    
 }
 
 ul.slider li  { 
@@ -466,12 +515,14 @@ ul.slider li  {
     width: inherit;
     height: inherit;
     transition: opacity .5s;
+    z-index: -1;
 }
 
 ul.slider li img {
     width: 100%;
     height: 800px;
     object-fit: cover;
+    z-index: -1;
 }
 
 ul.slider li:first-child {
@@ -507,15 +558,19 @@ opacity: 1;
 
 
 .container_info_compra { 
+    background-color: white;
+    position: relative;
+    z-index: -1;
     width: 800px;
     height: 700px;
-    position: relative;
     left: 950px;
     padding: 80px;
-    bottom: 950px;
+    bottom: 850px;
+    box-sizing: border-box;
+    border-radius: 30px;
 }
 .container_info_compra p {
-    color: white;
+    color: black;
 } 
 
 
@@ -531,7 +586,7 @@ opacity: 1;
 
 .infoDeCompra1 {
     position: relative;
-    border-bottom: solid white 2px;
+    border-bottom: solid black 2px;
     font-family: 'Lato', sans-serif;
     bottom: 45px;
     font-size: 25px;
@@ -540,7 +595,7 @@ opacity: 1;
 .infoDeCompraImg{
     position: relative;
     bottom: 70px;
-    border-bottom: solid, white, 2px;
+    border-bottom: solid, black, 2px;
     
 }
 .bold {
@@ -563,14 +618,14 @@ opacity: 1;
     font-family: 'Lato', sans-serif;
     font-weight: 500;
     font-size: 20px;
-    bottom: 15px;
+    bottom: 20px;
     border-top: solid, 2px, white;
 }
 
 
 .infoTarjetas { 
     position: relative;
-    top: 50px;
+    top: -20px;
 }
 .americanExpress {
     border: solid, 2px, black;
@@ -579,7 +634,7 @@ opacity: 1;
 .americanExpress img{
     position: relative;
     top: 15px;
-    left: 200px;
+    left: 150px;
     
 }
 
@@ -593,7 +648,7 @@ opacity: 1;
 .visa img{
     position: relative;
     top: 15px;
-    left: 180px;
+    left: 130px;
 }
 
 .visa p {
@@ -609,7 +664,7 @@ opacity: 1;
 .mastercard img{
     position: relative;
     top: 15px;
-    left: 200px;
+    left: 150px;
 }
 
 .mastercard p {
@@ -620,13 +675,96 @@ opacity: 1;
 }
 
 
-.infog60s {
+.infog60s1 {
+    border-radius: 30px;
     background-color: white;
     width: 800px;
-    height: 700px;
+    height: 600px;
     text-align: center;
     position: relative;
-    left: 500px;
-    bottom: 800px;
-    padding: 80px;
+    bottom: 500px;
+    padding: 50px;
 }
+
+.videog60s {
+    margin-top: 30px;
+}
+
+.titulo1 {
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Lato', sans-serif;
+}
+
+.infog60s1 p { 
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: black;
+    
+}
+
+.infog60s2 { 
+    border-radius: 30px;
+    background-color: white;
+    width: 800px;
+    height: 600px;
+    text-align: center;
+    position: relative;
+    bottom: 1200px;
+    left: 1000px;
+    padding: 50px;
+
+}
+
+.titulo2 {
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Lato', sans-serif;
+}
+
+
+.infog60s2 p { 
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: black;
+    
+}
+
+.infog60s2 img { 
+    width: 400px;
+}
+
+.infog60s3 { 
+    border-radius: 30px;
+    background-color: white;
+    width: 800px;
+    height: 600px;
+    text-align: center;
+    position: relative;
+    bottom: 1100px;
+    left: 500px;
+    padding: 50px;
+
+}
+
+.titulo3 {
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Lato', sans-serif;
+}
+
+
+.infog60s3 p { 
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: black;
+    
+}
+
+.infog60s3 img { 
+    width: 600px;
+}
+
