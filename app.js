@@ -8,19 +8,8 @@ const RouteProducts = require('./routes/products');
 const publicPath = path.resolve(__dirname, '/public');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
-<<<<<<< HEAD
-const remembermeMiddleware = require('./middleware/RemembermeMiddleware');
-=======
-//React 
-
->>>>>>> 9e7bb5847ffdedc5c02be5372d650a8904211c56
-
-
-//Method use 
-app.listen(process.env.PORT || 3000, function() {
-    
     console.log('Servidor corriendo en puerto 3000');
-});
+
 
 app.use(express.static('public'));
 app.set('views engine', 'ejs');
