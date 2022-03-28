@@ -4,9 +4,14 @@ const router= express.Router();
 const usersController= require('../controllers/usersController');
 const path = require('path');
 const { body, check }= require('express-validator');
+//Const for Multer
 const multer = require('multer')
+//Const for guestMiddleware
 const guestMiddleware = require('../middleware/guestMiddleware');
+//Const for authtMiddleware
 const authMiddleware = require('../middleware/authMiddleware');
+//Const for checktMiddleware
+const checkMiddleware = require('../middleware/ChekLogged')
 const options = {
     root: path.join(__dirname, '../views')
 };
@@ -34,7 +39,7 @@ const validationsForUsers= [
     //body('address').notEmpty().withMessage('Debes agregar una direccion'),
     //body('Zipcode').notEmpty().withMessage('Debes agregar un codigo postal'),
     body('passwordConfirm').notEmpty().withMessage('Debes  volver escribir la contraseña '),
-    body('uploadImage').custom((value,{req})=>{
+    body('uploadImage_users').custom((value,{req})=>{
         let file = req.file;
         let acceptedExtensions  = ['.jpg', '.png', '.gif'];
         if (!file){
@@ -57,14 +62,11 @@ const validationsLogin = [
 
 ]; 
 //Routes Users/Logins
-
 router.get('/login', usersController.login);
- router.post('/users/login', validationsLogin, usersController.processLogin);
-// router.get('/register', usersController.register);
-router.get('/register', guestMiddleware,usersController.register);
-router.post('/', uploadFile.single('uploadImage'),  validationsForUsers, usersController.create);
-
-
+router.post('/users/login', validationsLogin, usersController.processLogin);
+//Route for users/Register
+router.get('/register',usersController.register);
+router.post('/', uploadFile.single('uploadImage_users'),  validationsForUsers, usersController.create);
 
 //Export Module
 module.exports= router;

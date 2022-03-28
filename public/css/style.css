@@ -492,6 +492,7 @@ footer{
     transition: all 0.5s;
 }
 
+<<<<<<< HEAD
 
 .container { 
     width: 800px;
@@ -772,3 +773,9 @@ opacity: 1;
     width: 600px;
 }
 
+=======
+.vendedor{
+    color: black;
+    
+}
+>>>>>>> ef78c33c49c52c5355d16ada808929d567f8873d
