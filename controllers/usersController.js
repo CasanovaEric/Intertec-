@@ -45,6 +45,7 @@ const controller = {
      }else{ 
           res.render('../views/register.ejs', {errors: errors.array(),
           old: req.body})
+         
      }
 
      },
@@ -102,30 +103,26 @@ const controller = {
             {
                firstName: req.body.firstName, 
                lastName: req.body.lastName,
-               userName: req.session.usersLogged.userName,
-               email: req.session.usersLogged.email,
-               dateOfBirth: req.body.dateOfBirth,
-               addres: req.session.usersLogged.addres,
-               zipCode: req.session.usersLogged.zipCode,
-               rol_users: req.session.usersLogged.rol_users,
-               password_users: req.session.usersLogged.password,
-               passwordConfirm: req.session.usersLogged.passwordConfirm,
-               image_users: req.session.usersLogged.image_users,
+               //userName: req.body.userName,
+              // email:req.body.email,
+               dateOfBirth:req.body.dateOfBirth,
+              /*  addres: req.body.addres,
+               zipCode:req.body.zipCode,
+               rol_users:req.body.rol_users,
+               password_users :'123456789',
+               passwordConfirm: '123456789',
+               image_users:'imagen', */
             },
             {
-                where: {id_users : req.params.id}
-            });
-            console.log(userUpdate)
-            return res.json(userUpdate)
-          .then ( ()=> {
-          const otrafuncion = async () => {
-               console.log(await userUpdate)
-           }
-           console.log(otrafuncion)           
-           return res.json(userUpdate)
+                where: {id_users : req.params.id }
             })
+            .then(resultado => {
+               console.log(resultado);
+               //console.log(req.body.firstName, req.body.lastName, req.body.email, req.body.dateOfBirth, req.body.addres, req.body.zipCode)
+               return  res.render('login.ejs');
+             })
           .catch(error => {
-             console.log("Mal di tasea")
+             console.log("SE JO DIO")
              console.log(error)
              res.send(error)
           })
