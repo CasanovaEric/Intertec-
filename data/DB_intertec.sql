@@ -14,12 +14,12 @@ DROP TABLE IF EXISTS users_intertec;
      userName varchar(100) not null unique key,
      email varchar(100) not null unique key,
      dateOfBirth date not null,
-     addres varchar(100) not null,
-     zipCode int(20) not null,
-     image_users varchar(255) not null,
-     password_users varchar(256) not null,
-     passwordConfirm varchar(256) not null,
-     rol_users varchar(30) not null
+     addres varchar(100)  null,
+     zipCode int(20)  null,
+     image_users varchar(255)  null,
+     password_users varchar(256)  null,
+     passwordConfirm varchar(256)  null,
+     rol_users varchar(30)  null
      );
 
 /* DROP TABLE PRODUCTS_INTERTEC*/
