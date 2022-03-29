@@ -36,9 +36,10 @@ const validationsForUsers= [
     body('email').isEmail().withMessage('Debes Completar el email'),
     body('password').notEmpty().withMessage('Debes escribir una contraseña'),
     //body('dateOfBirth').notEmpty().withMessage('Debes agregar una fecha de nacimiento'),
-    //body('address').notEmpty().withMessage('Debes agregar una direccion'),
-    //body('Zipcode').notEmpty().withMessage('Debes agregar un codigo postal'),
+    body('addres').notEmpty().withMessage('Debes agregar una direccion'),
+    body('zipCode').notEmpty().withMessage('Debes agregar un codigo postal'),
     body('passwordConfirm').notEmpty().withMessage('Debes  volver escribir la contraseña '),
+    body('vendedor').notEmpty().withMessage('Debes escoger un rol vendedor o comprador'),
     body('uploadImage_users').custom((value,{req})=>{
         let file = req.file;
         let acceptedExtensions  = ['.jpg', '.png', '.gif'];
@@ -67,6 +68,9 @@ router.post('/users/login', validationsLogin, usersController.processLogin);
 //Route for users/Register
 router.get('/register',usersController.register);
 router.post('/', uploadFile.single('uploadImage_users'),  validationsForUsers, usersController.create);
-
+//Route Update && Delete user
+router.get('/users/edit/:id', usersController.ProfileUser)
+//Router Update user
+router.put('/users/edit/:id', usersController.update)
 //Export Module
 module.exports= router;
