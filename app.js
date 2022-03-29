@@ -16,7 +16,7 @@ app.set('views engine', 'ejs');
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(cookieParser());
-app.use(remembermeMiddleware);
+//app.use(remembermeMiddleware);
 app.use(session({secret: 'this is secret'}));
 //"ROUTER PRODUCTS"
 //app.use('/', RouteProducts);
