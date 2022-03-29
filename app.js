@@ -40,4 +40,8 @@ app.use('/products', RouteProducts);
  app.use('/', RouteUser);
  //Route Api intertec!!
  app.use('/api', RouteApi);
+//Routes Products
+app.use('/products', RouteProducts);
+//Router users
+app.use('/', RouteUser);
 
