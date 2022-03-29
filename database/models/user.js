@@ -32,27 +32,29 @@ let cols = {
     },
     addres: {
         type: DataTypes.STRING(200),
-        allowNull: false,
+        allowNull: true,
     },
     zipCode: {
         type: DataTypes.DECIMAL(20),
-        allowNull: false,
+        allowNull: true,
 
     },
     image_users: {
         type: DataTypes.STRING(200),
-        allowNull: false,
+        allowNull: true,
     },
     password_users: {
         type: DataTypes.STRING(200),
-        allowNull: false,
+        allowNull: true,
     },
     passwordConfirm: {
         type: DataTypes.STRING(200),
-        allowNull: false,
+        allowNull: true,
     },
     rol_users: {
-        type: DataTypes.STRING(200)
+        type: DataTypes.STRING(200),
+        allowNull: true,
+
     }
 };
 

@@ -1,0 +1,42 @@
+value="<%= user.firstName %>"
+<!--'include Head'-->
+<%- include('partials/head' ,{title: 'register'} )%>
+
+<body class="fondo">
+
+    <!--'include headerNavBar'-->
+   <!--  <%- include('partials/headerNavBar') %>
+    <main class="register">
+        <% if (locals.errors){
+            errors.forEach(function(error) { %>
+        <p class="errors"><%= error.msg %></p>
+        <% })
+            }
+         %>    -->
+         
+        <form action="<%= user.id_users %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            <input type="text" name="firstName"  value="<%= user.firstName %>" placeholder="Nombre">
+            <input type="text" name="lastName" value="<%= user.lastName %>" placeholder= "apellido">
+            <input type="text" name="userName"   value="<%= user.userName %>"placeholder="Nombre de usuario">
+            <input type="email" name="email"  value="<%= user.email %>" placeholder="E-mail">
+            <br>
+            <br>
+            <input type="date" name="dateOfBirth" id="birth_date">
+            <input type="text" name="addres" value="<%= user.addres %>" placeholder="Domicilio">
+            <input type="text" name="zipCode"  value="<%= user.zipCode %>" placeholder="Codigo Postal">
+            <h4></h4>
+            <input type="password" name="password" placeholder="Elegí tu contraseña">
+            <input type="password" name="passwordConfirm" placeholder="Confirmá tu contraseña">
+            <br>
+            <input name="vendedor" class="vendedor" value="<%= user.rol_users %>" placeholder="rol">
+            <br>
+            <input type="submit" value="editar">
+            <input type="reset" value="Borrar">
+            <br>
+            <br>
+        </form>
+    </main>
+</body>
+<!--'include footer'-->
+<%- include('partials/footer') %>
+</html>
