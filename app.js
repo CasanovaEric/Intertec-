@@ -21,7 +21,7 @@ app.listen(process.env.PORT || 3000, function() {
     
     console.log('Servidor corriendo en puerto 3000');
 });
-app.use(methodOverride('_method'))
+//app.use(methodOverride('_method'))
 app.use(express.static('public'));
 app.set('views engine', 'ejs');
 app.use(express.urlencoded({extended: false}));
