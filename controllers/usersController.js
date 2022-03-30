@@ -78,24 +78,7 @@ const controller = {
 
                }).catch(error => res.send(error))
      },
-     /* updateProfile: async (req, res,) => {
-         const userUpdate = await userModel.update({
-               firstName: req.body.firstName,
-               lastName: req.body.lastName,
-               userName: req.session.usersLogged,
-               email: req.body.email,
-               dateOfBirth: req.body.dateOfBirth,
-               addres: req.session.usersLogged.addres,
-               zipCode: req.session.usersLogged.zipCode,
-               rol_users: req.session.usersLogged.rol_users,
-               password_users: req.session.usersLogged.password,
-               passwordConfirm: req.session.usersLogged.password,
-               image_users: req.session.usersLogged.image_users,
-          }, { where: { id: req.params.id } })
-           
-
-
-     }, */update: (req,res) => {
+     update: (req,res) => {
         let user_id = parseInt(req.params.id);
         console.log("user_id: ", user_id);
        let userUpdate =  userModel
