@@ -1,10 +1,9 @@
 .fondo {
-   margin: 0%;
-    background-color: black;
+    background-color: skyblue;
 }
 
 .naranja {
-    background-color: #ffa500;
+    background-color: white;
     width: 100%;
   
 }
@@ -21,11 +20,11 @@
 }
 
 h1 {
-    color: white;
+    color: black;
 }
 
 h4 {
-    color: white;
+    color: black;
 }
 
 .cabecera1 {
@@ -91,16 +90,38 @@ h4 {
     align-items: unset;
     align-content: flex-start;
     width: auto;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 
 .cabecera2 a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-family: 'Lato', sans-serif;
     font-size: 20px;
-
 }
+
+.cabecera2 a:hover { 
+    color: #87ceeb;
+}
+
+.fa-shopping-cart { 
+    color: #87ceeb;
+    font-size: 20px;
+}
+
+.fa-user-plus { 
+    color: #87ceeb;
+    font-size: 20px;
+    margin-left: 8px;
+}
+.fa-user { 
+    color: #87ceeb;
+    font-size: 20px;
+    margin-left: 8px;
+}
+
 .register {
     order: 0;
     flex: 0 1 auto;
@@ -189,13 +210,22 @@ h4 {
     align-content: center;
 }
 
-.bateria {
+.contenedor-tres li { 
+    list-style: none;
+}
+.bateria  {
     order: 0;
     flex: 0 1 auto;
     align-self: auto;
     height: auto;
     width: auto;
+    color: white;
+    padding: 10px;
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    
 }
+
 
 .camara {
     order: 0;
@@ -238,6 +268,7 @@ h4 {
     width: auto;
 }
 
+
 .contenedor-cuatro {
     display:flex;
     flex-direction: row;
@@ -245,6 +276,9 @@ h4 {
     justify-content: space-around;
     align-items: center;
     align-content: space-around;
+    background-color: white;
+    padding: 30px;  
+    
 
 }
 
@@ -269,6 +303,8 @@ h4 {
 .sobre-nosotros ul li a {
     font-size: 16px; 
     font-family: 'Lato', sans-serif;
+    color: black;
+    font-weight: bold;
 }
 
 .venta-online { 
@@ -279,11 +315,15 @@ h4 {
     align-self: auto;
     height: auto;
     width: auto;
+    color: black;
+    font-weight: bold;
 }
 
 .venta-online ul li a {
     font-size: 16px;
     font-family: 'Lato', sans-serif;
+    color: black;
+    font-weight: bold;
 }
 
 
@@ -294,59 +334,79 @@ h4 {
    align-self: auto;
    height: auto;
    width: auto;
+  
 }
 
 .soporte ul li a {
     font-size: 16px;
+    color: black;
+    font-weight: bold;
    
 }
 
-
-.navegacion {
-    margin: auto;
-    width: 500px;
+*{  margin: 0;
+    padding: 0;
 }
 
-ul,
-ol {
-    list-style: none;
+
+.encabezado {
+    background: black;
+    margin-bottom: 30px;
 }
 
-.desplegable li a {
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    padding: 10px 15px;
+.encabezado nav { 
     display: flex;
-    box-sizing: border-box;
+    justify-content: space-around;
+    
 }
 
-.desplegable>li {
-    float: left;
+.encabezado nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
 }
 
-.desplegable li a:hover {
-    background-color: #FFA500;
+.encabezado a { text-decoration: none;
+font-size: 20px;
+color: white;
+padding: 12px 20px;
+display: block;
+margin-bottom: 10px;
+
 }
 
-.desplegable li ul {
-    display: none;
+.encabezado a:hover {
+    background-color: #87ceeb;
+}
+
+.encabezado nav ul li ul { 
+    display: flex;
+    flex-direction: column;
+}
+
+.encabezado nav ul li ul {
     position: absolute;
-    min-width: 140px;
+background: black;
 }
 
-.desplegable li:hover>ul {
-    display: block;
-}
-
-.desplegable li ul li {
+.encabezado nav ul li ul li{ 
+    width: 180px;
     position: relative;
-
 }
 
-.desplegable li ul li ul {
-    right: -140px;
-    top: 0px;
+.encabezado nav ul li ul li ul {
+    position: absolute;
+    top: 0;
+    left:180px;
+}
+
+.encabezado nav ul li ul {
+    display:none
+}
+
+.encabezado nav ul li:hover > ul{
+    display: block;
+    
 }
 
 h1 {
@@ -420,16 +480,296 @@ footer{
 }
 
 .social_1:hover{
-    transform: rotate(30deg);
+    transform: rotate(360deg);
     transition: all 0.5s;
 }
 .social_2:hover{
-    transform: rotate(30deg);
+    transform: rotate(360deg);
     transition: all 0.5s;
 }
 .social_3:hover{
-    transform: rotate(30deg);
+    transform: rotate(360deg);
     transition: all 0.5s;
+}
+
+
+.container { 
+    width: 800px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+
+
+ul.slider { 
+    position: relative;
+    width: 800px;
+    height: 800px;
+    z-index: -1;
+    
+}
+
+ul.slider li  { 
+    position: absolute;
+    left: 0;
+    top:0;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+    z-index: -1;
+    list-style: none;
+}
+
+ul.slider li img {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    z-index: -1;
+    list-style: none;
+}
+
+ul.slider li:first-child {
+    opacity: 0;
+}
+
+ul.slider li:target {
+opacity: 1;
+}
+
+
+.menu { 
+    text-align: center;
+    margin: 20px;
+}
+
+.menu li{ 
+    display: inline-block;
+    text-align: center;
+} 
+
+.menu li a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: grey;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    border-radius: 100%;
+}
+
+
+.container_info_compra { 
+    background-color: white;
+    position: relative;
+    z-index: -1;
+    width: 800px;
+    height: 700px;
+    left: 950px;
+    padding: 80px;
+    bottom: 850px;
+    box-sizing: border-box;
+    border-radius: 30px;
+}
+.container_info_compra p {
+    color: black;
+} 
+
+
+.infoDeCompraImg1 {
+    margin-top: 35px;
+    text-align: center;
+    margin-bottom: 35px;
+    position: relative;
+    bottom: 45px;
+
+}
+
+
+.infoDeCompra1 {
+    position: relative;
+    border-bottom: solid black 2px;
+    font-family: 'Lato', sans-serif;
+    bottom: 45px;
+    font-size: 25px;
+}
+
+.infoDeCompraImg{
+    position: relative;
+    bottom: 70px;
+    border-bottom: solid, black, 2px;
+    
+}
+.bold {
+    font-weight: bold;
+}
+
+
+.infoDeCompra2 { 
+    position: relative;
+    bottom: 10px;
+    left: 200px;
+    font-size: 20px;
+    font-weight: 200;
+    font-family: 'Lato', sans-serif;
+    
+}
+
+.infoDeCompra3 { 
+    position:relative;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    bottom: 20px;
+    border-top: solid, 2px, white;
+}
+
+
+.infoTarjetas { 
+    position: relative;
+    top: -20px;
+}
+.americanExpress {
+    border: solid, 2px, black;
+}
+
+.americanExpress img{
+    position: relative;
+    top: 15px;
+    left: 150px;
+    
+}
+
+.americanExpress p {
+    position: relative;
+    bottom: 20px;   
+    font-family: 'Lato', sans-serif;
+   
+}
+
+.visa img{
+    position: relative;
+    top: 15px;
+    left: 130px;
+}
+
+.visa p {
+    position: relative;
+    bottom: 10px;   
+    font-family: 'Lato', sans-serif;
+   
+}
+
+.mastercard {
+    margin-bottom: 20px;
+}
+.mastercard img{
+    position: relative;
+    top: 15px;
+    left: 150px;
+}
+
+.mastercard p {
+    position: relative;
+    bottom: 20px;  
+    font-family: 'Lato', sans-serif;
+   
+}
+
+
+.infog60s1 {
+    border-radius: 30px;
+    background-color: white;
+    width: 800px;
+    height: 600px;
+    text-align: center;
+    position: relative;
+    bottom: 500px;
+    padding: 50px;
+}
+
+.videog60s {
+    margin-top: 30px;
+}
+
+.titulo1 {
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Lato', sans-serif;
+}
+
+.infog60s1 p { 
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: black;
+    
+}
+
+.infog60s2 { 
+    border-radius: 30px;
+    background-color: white;
+    width: 800px;
+    height: 600px;
+    text-align: center;
+    position: relative;
+    bottom: 1200px;
+    left: 1000px;
+    padding: 50px;
+
+}
+
+.titulo2 {
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Lato', sans-serif;
+}
+
+
+.infog60s2 p { 
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: black;
+    
+}
+
+.infog60s2 img { 
+    width: 400px;
+}
+
+.infog60s3 { 
+    border-radius: 30px;
+    background-color: white;
+    width: 800px;
+    height: 600px;
+    text-align: center;
+    position: relative;
+    bottom: 1100px;
+    left: 500px;
+    padding: 50px;
+
+}
+
+.titulo3 {
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Lato', sans-serif;
+}
+
+
+.infog60s3 p { 
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    color: black;
+    
+}
+
+.infog60s3 img { 
+    width: 600px;
 }
 
 .vendedor{
