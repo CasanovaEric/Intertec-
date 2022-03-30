@@ -1,5 +1,4 @@
 comandos git a usar:
-<<<<<<< HEAD
 git init.
 git clone> url del repo>
 git fetch, mantener actualizado tu repo local con los cambios del remote.
@@ -7,21 +6,6 @@ git pull, para descargar los cambios a tu repo local desde el repo remote.
 
 git push origin (nombre de la rama ( ' a la cual quieren subir los cambios del repo local al repo remote' ).
 
-=======
-
-git init.
-
-git clone> url del repo>
-
-git fetch, mantener actualizado tu repo local con los cambios del remote.
-
-git pull, para descargar los cambios a tu repo local desde el repo remote.
-
-git push origin (nombre de la rama ( ' a la cual quieren subir los cambios del repo local al repo remote' ).
-
-npm install 
-
->>>>>>> 3cef78d1c11f8a7bec32358d03ef87d0a7bb8664
 dependencias usadas:
 {"ejs",
 "express",
