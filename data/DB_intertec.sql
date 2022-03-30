@@ -20,17 +20,17 @@ DROP TABLE IF EXISTS users_intertec;
      password_users varchar(256)  null,
      passwordConfirm varchar(256)  null,
      rol_users varchar(30)  null
-     );
+     )ENGINE = InnoDB;
 
 /* DROP TABLE PRODUCTS_INTERTEC*/
 DROP TABLE IF EXISTS `products_intertec`
 /*CREATE TABLE PRODUCTS*/
 create table products_intertec (
   id_products int(10) not null auto_increment primary key,
-  name_products varchar(255) not null,
-  price decimal(5, 1) not null,
-  image_products varchar(255) not null,
-  users_id int(10) not null,
+  name_products varchar(255)  null,
+  price decimal(5, 1)  null,
+  image_products varchar(255)  null,
+  users_id int(10)  null,
   constraint fk_users_id   
   foreign key (users_id) references users_intertec(id_users)
   on delete cascade 
@@ -42,9 +42,9 @@ DROP TABLE IF EXISTS atribute_products_intertec
 /*CREATE TABLE ATRIBUTES_PRODUCTS_INTERTEC*/
 create table atributes_products_intertec (
     id int(10) not null auto_increment primary key,
-    id_products int(10) not null,
-    names_atributes varchar(255) NOT NULL,
-    values_atributes varchar(255) NOT NULL,
+    id_products int(10)  null,
+    names_atributes varchar(255)  NULL,
+    values_atributes varchar(255)  NULL,
     constraint fk_id_products
     foreign key (id_products) REFERENCES products_intertec(id_products)
     on delete cascade

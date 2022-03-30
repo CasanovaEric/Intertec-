@@ -1,3 +1,4 @@
+value="<%= user.firstName %>"
 <!--'include Head'-->
 <%- include('partials/head' ,{title: 'register'} )%>
 
@@ -13,7 +14,7 @@
             }
          %>   
           -->
-         <form action="<%= user.id_users%>?_method=PUT" method="POST" >
+         <form action="/users/delete/<%= user.id_users%>?_method=PUT" method="POST" >
             <input type="text" name="firstName"  value="<%= user.firstName %>" placeholder="Nombre">
             <input type="text" name="lastName" value="<%= user.lastName %>" placeholder= "apellido">
             <input type="text" name="userName"   value="<%= user.userName %>"placeholder="Nombre de usuario">
@@ -26,10 +27,8 @@
             <br>
             <!-- <input name="vendedor" class="vendedor" value="<%= user.rol_users %>" placeholder="rol"> -->
             <br>
-            <input type="submit" value="editar">
-            <input type="reset" value="Borrar">
+            <input type="submit" value="eliminar">
             <br>
-            <div class="carrito"> <a href="/users/delete/<%= user.id_users%>"> eliminar perfil </a></div>
             <br>
         </form>
     </main>

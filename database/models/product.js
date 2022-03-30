@@ -11,16 +11,16 @@ let cols = {
     },
     name_products: {
         type: DataTypes.STRING(200),
-        allowNull: false,
+        allowNull: true,
     },
     price: {
         type: DataTypes.DECIMAL(5, 1),
-        allowNull: false,
+        allowNull: true,
 
     },
     image_products: {
         type: DataTypes.STRING(200),
-        allowNull: false,
+        allowNull: true,
     },
     users_id: {
         type: DataTypes.INTEGER,

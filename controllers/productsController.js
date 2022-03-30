@@ -9,12 +9,6 @@ const controller={
       const products = await productModel.findAll({include:['user']}); 
           res.render('index.ejs', {data:products})
     },
-
-    detail: (req, res)=>{
-         const id = req.params.id
-         res.render('DetailsProducts.ejs')
-
-    },
     registerProducts: (req, res)=>{
      res.render('create-product-form.ejs')
     },
@@ -35,24 +29,63 @@ const controller={
           values_atributes: req.body.valueAtribute,
           id_products: product.id_products
          });
-     //     let errors = validationResult(req);
-     //     if( errors.isEmpty()){
-     //          let user= { 
-     //           firstName :req.body.firstName,
-     //           lastName: req.body.lastName,
-     //           userName: req.body.userName,
-     //           email: req.body.email,
-     //           password: bcrypt.hashSync(req.body.password, 10),
-     //           passwordConfirm: bcrypt.hashSync(req.body.password, 10),
-     //          }} else{
-     //          res.render('../views/register.ejs', {
-     //               errors: errors.array(),
-     //                old: req.body});
-     //     }
-         //Declarate Redirect views;
          res.render("index.ejs")
-         console.log(req.file)
+         /* console.log(req.file) */
     },
+    detail: async (req, res)=>{
+        id_products = req.params.id
+        await productModel.findByPk(id_products)
+        .then(function (product) {
+            console.log(product) 
+            res.render('product-Update.ejs', { product: product })
+
+
+        }).catch(error => res.send(error))
+
+   },
+
+    update: (req,res) => {
+        let id_users = parseInt(req.session.usersLogged.id_users)
+       let productUpdate =  productModel
+        .update(
+            {
+                name_products: req.body.name_products, 
+                price: req.body.price,
+                id_users: id_users
+            },
+            {
+                where: {id_products : req.params.id }
+            })
+            .then(product => {
+               console.log(product);
+              console.log(req.body.firstName, req.body.lastName, req.body.email, req.body.dateOfBirth, req.body.addres, req.body.zipCode)
+               return  res.render('product-Update.ejs', { product: product });
+             })
+          .catch(error => {
+             console.log("SE JO DIO")
+             console.log(error)
+             res.send(error)
+          })
+    },
+    /* delete: function (req,res) {
+     let id_users = req.params.id;
+     userModel
+     .findByPk(id_users)
+     .then(user => {
+         return res.render('profileDelete.ejs',{ user:user })
+     })
+     .catch(error => res.send(error))
+ 
+          
+    },
+    destroy: function (req,res) {
+     let id_users = req.params.id;
+     userModel
+     .destroy({where: {id_users: id_users}, force: true}) // force: true es para asegurar que se ejecute la acción
+     .then(()=>{
+         return res.redirect('/register')})
+     .catch(error => res.send(error)) 
+ }, */
 
 
 
