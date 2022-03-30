@@ -133,8 +133,7 @@ const controller = {
 };
 
 //"MODULE EXPORT"
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 module.exports= controller;
 
 var ds= 36
@@ -143,9 +142,7 @@ var fe=3
 if (ds/fe >12) {
     console.log("puedo divirlo")
 } else { console.log("no puedo") }
-=======
+
 module.exports = controller;
->>>>>>> 46ce090efeeba18c6116bc11fff387f4fb1cd9e8
-=======
+
 module.exports = controller;
->>>>>>> 42cce81d42cd9c04ee5f409ccdce9bdca707483a
