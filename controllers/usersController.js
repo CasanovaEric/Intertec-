@@ -55,11 +55,11 @@ const controller = {
                const { email, password } = req.body
                const usersLogin = await userModel.findOne({ where: { email } })
                const checkpassword = await compare(password, usersLogin.password_users)
+               req.session.usersLogged = usersLogin;
                if (!usersLogin || !checkpassword) {
                     return res.render('login.ejs', { errors: [{ msg: 'credenciales invalidas' }] })
                }
 
-               req.session.usersLogged = usersLogin;
                //req.session.usersLogin.id
                if (req.body.remember != undefined) {
                     res.cookie('recordame', usersLogin.email, { maxAge: 60000 });
@@ -134,6 +134,7 @@ const controller = {
 
 //"MODULE EXPORT"
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports= controller;
 
 var ds= 36
@@ -145,3 +146,6 @@ if (ds/fe >12) {
 =======
 module.exports = controller;
 >>>>>>> 46ce090efeeba18c6116bc11fff387f4fb1cd9e8
+=======
+module.exports = controller;
+>>>>>>> 42cce81d42cd9c04ee5f409ccdce9bdca707483a
