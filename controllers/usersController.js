@@ -55,11 +55,11 @@ const controller = {
                const { email, password } = req.body
                const usersLogin = await userModel.findOne({ where: { email } })
                const checkpassword = await compare(password, usersLogin.password_users)
+               req.session.usersLogged = usersLogin;
                if (!usersLogin || !checkpassword) {
                     return res.render('login.ejs', { errors: [{ msg: 'credenciales invalidas' }] })
                }
 
-               req.session.usersLogged = usersLogin;
                //req.session.usersLogin.id
                if (req.body.remember != undefined) {
                     res.cookie('recordame', usersLogin.email, { maxAge: 60000 });
