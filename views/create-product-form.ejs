@@ -1,105 +1,20 @@
 
 <!--'include Head'-->
 <%- include('partials/head' ,{title: 'products'} )%>
-<body >
+<body class='fondo'>
     <!--'Inlcude HeaderNavbar'-->
     <%- include('partials/headerNavBar') %>
-    <div class="wrap">
+    <form action="/products" method="POST" enctype="multipart/form-data">
+        <input type="text" name="name_products" placeholder="Nombre producto">
+        <input type="text" name="price"  placeholder= "precio">
+        <input type="text" name="nameAtribute"  placeholder= "atributo1">
+        <input type="text" name="valueAtribute" placeholder="valor atributo">
+        <label name="uploadImage_products" class="errors">Subir imagen<input type="file" name="uploadImage_products"></label>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Borrar">
+        <br>
         
-        <h1>Escoge un producto</h1>
-        <div class="store-wrapper">
-        
-            <section class="products-list">
-                <div class="product-item" category="samsung">
-                    <img src="/imagenes/samsung/producto-1.jpg" alt="">
-                    <a href="#">Samsung</a>
-                    <h2>$35.750</h2>
-                    <button class="button-add">Agregar</button>
-                </div>
-                <div class="product-item" category="samsung">
-                    <img src="/imagenes/samsung/producto-2.png"  alt="">
-                    <a href="#">Samsung</a>
-                    <h2>$65.000</h2>
-                    <button class="button-add">Agregar</button>
-                </div>
-                <div class="product-item" category="huawei">
-                    <img src="/imagenes/huawei/producto-3.jpg" alt="">
-                    <a href="#">Huawei</a>
-                    <h2>$65.000</h2>
-                    <button class="button-add">Agregar</button>
-                </div>
-                <div class="product-item" category="huawei">
-                    <img src="/imagenes/huawei/producto-4.jpg" alt="">
-                    <a href="#">Huawei</a>
-                    <h2>$65.000</h2>
-                    <button class="button-add">Agregar</button>
-                </div>
-                <div class="product-item" category="motorola">
-                    <img src="/imagenes/motorola/producto-5.jpg"  alt="">
-                    <a href="#">Motorola</a>
-                    <h2>$65.000</h2>
-                    <button class="button-add">Agregar</button>
-                </div>
-                <div class="product-item" category="motorola">
-                    <img src="/imagenes/motorola/producto-6.jpg" alt="">
-                    <a href="#">Motorola</a>
-                    <h2>$65.000</h2>
-                    <button class="button-add">Agregar</button>
-                </div>
-                <div class="product-item" category="iphone">
-                    <img src="/imagenes/iphone/producto-7.jpg" alt="">
-                    <a href="#">Iphone</a>
-                    <h2>$65.000</h2>
-                    <button class="button-add">Agregar</button>
-                </div>
-                <div class="product-item" category="iphone">
-                    <img src="/imagenes/iphone/producto-8.jpg" alt="">
-                    <a href="#">Iphone</a>
-                    <h2>$65.000</h2>
-                    <button class="button-add">Agregar</button>
-                </div>
-                <div class="product-item" category="charger">
-                    <img src="/imagenes/cargadores/producto-10.jpg" alt="">
-                    <a href="#">Charger</a>
-                    <h2>$1.000</h2>
-                    <button class="button-add">Agregar</button>
-                </div>
-                <div class="product-item" category="charger">
-                    <img src="/imagenes/cargadores/producto-11.jpg" alt="">
-                    <a href="#">Charger</a>
-                    <h2>$1.000</h2>
-                    <button class="button-add">Agregar</button>
-                </div>
-                <div class="product-item" category="handset">
-                    <img src="/imagenes/auriculares/producto-12.jpg" alt="">
-                    <a href="#">Handset</a>
-                    <h2>$2.000</h2>
-                    <button class="button-add">Agregar</button>
-                </div>
-                <div class="product-item" category="handset">
-                    <img src="/imagenes/auriculares/producto-13.jpg" alt="">
-                    <a href="#">Handset</a>
-                    <h2>$2.000</h2>
-                    <button class="button-add">Agregar</button>
-                </div>
-                <div class="product-item" category="watch">
-                    <img src="/imagenes/relojes/producto-14.jpg" alt="">
-                    <a href="#">Watch</a>
-                    <h2>$28.000</h2>
-                    <button class="button-add">Agregar</button>
-                </div>
-                <div class="product-item" category="watch">
-                    <img src="/imagenes/relojes/producto-15.jpg" alt="">
-                    <a href="#">Watch</a>
-                    <h2>$28.000</h2>
-                    <button class="button-add">Agregar</button>
-                </div>
-
-
-        </div>
-        </section>
-    </div>
-</div>
+    </form> 
 
     
     

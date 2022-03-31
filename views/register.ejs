@@ -1,41 +1,36 @@
-<!--'include Head'-->
-<%- include('partials/head' ,{title: 'register'} )%>
 
-<body class="fondo">
-
-    <!--'include headerNavBar'-->
-    <%- include('partials/headerNavBar') %>
-    <main class="register">
-        <% if (locals.errors){
-            errors.forEach(function(error) { %>
-        <p class="errors"><%= error.msg %></p>
-        <% })
-            }
-         %>   
-         
-        <form action="/" method="POST" enctype="multipart/form-data">
-            <input type="text" name="firstName"  value="<%= locals.old && old.firstName ? old.firstName : '' %>" placeholder="Nombre">
-            <input type="text" name="lastName" value="<%= locals.old && old.lastName ? old.lastName : '' %>" placeholder= "apellido">
-            <input type="text" name="userName"   value="<%= locals.old && old.userName ? old.userName : '' %>"placeholder="Nombre de usuario">
-            <input type="email" name="email"  value="<%= locals.old && old.email ? old.email : '' %>" placeholder="E-mail">
-            <br>
-            <br>
-            <input type="date" name="dateOfBirth" id="birth_date">
-            <input type="text" name="addres" value="<%= locals.old && old.addres ? old.addres : '' %>" placeholder="Domicilio">
-            <input type="number" name="zipCode"  value="<%= locals.old && old.zipCode ? old.zipCode : '' %>" placeholder="Codigo Postal">
-            <h4></h4>
-            <input type="password" name="password" placeholder="Elegí tu contraseña">
-            <input type="password" name="passwordConfirm" placeholder="Confirmá tu contraseña">
-            <br>
-            <label name="upload" class="errors">Subir imagen<input type="file" name="uploadImage"></label>
-            <br>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Borrar">
-            <br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <title>Register</title>
+</head>
+<body class="body-box">
+    <section class="form-register">
+    
+         <h5>Register Form</h5>
+         <form action="/"  method="POST" enctype="multipart/form-data">
+            <input class="controls" type="text" name="firstName"  value="<%= locals.old && old.firstName ? old.firstName : '' %>" placeholder="Nombre">
+            <input class="controls" type="text" name="lastName" value="<%= locals.old && old.lastName ? old.lastName : '' %>" placeholder= "apellido">
+            <input class="controls" type="text" name="userName"   value="<%= locals.old && old.userName ? old.userName : '' %>"placeholder="Nombre de usuario">
+            <input class="controls" type="email" name="email"  value="<%= locals.old && old.email ? old.email : '' %>" placeholder="E-mail"><br>
+            <input class="controls" type="date" name="dateOfBirth" id="birth_date">
+            <input class="controls" type="text" name="addres" value="<%= locals.old && old.addres ? old.addres : '' %>" placeholder="Domicilio">
+            <input class="controls" type="number" name="zipCode"  value="<%= locals.old && old.zipCode ? old.zipCode : '' %>" placeholder="Codigo Postal"><br>
+            <input class="controls" type="password" name="password" placeholder="Elegí tu contraseña">
+            <input class="controls" type="password" name="passwordConfirm" placeholder="Confirmá tu contraseña"><br>
+            <label class="control-errors" name="upload"> Subir imagen</label>
+            <input class="control-file" type="file" name=" uploadImage"><br><br>
+            <input class="buttons" type="submit" value="Send">
+            <input class="buttons" type="reset" value="Delete">
             <br>
         </form>
-    </main>
+    </section>
 </body>
-<!--'include footer'-->
-<%- include('partials/footer') %>
 </html>
