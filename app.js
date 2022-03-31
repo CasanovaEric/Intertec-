@@ -7,6 +7,8 @@ const RouteUser= require('./routes/user');
 const RouteProducts = require('./routes/products');
 const publicPath= path.resolve(__dirname, '/public');
 const session = require('express-session');
+//React 
+
 
 
 //Method use 
@@ -33,3 +35,6 @@ app.use('/products', RouteProducts)
 app.get("/motog60s", (req, res) => { 
     res.sendFile(path.join(__dirname + "/views/motog60s.html"))
 })
+
+
+//React 

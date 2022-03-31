@@ -223,7 +223,9 @@ h4 {
     padding: 10px;
     font-family: 'Lato', sans-serif;
     font-size: 30px;
+    
 }
+
 
 .camara {
     order: 0;
@@ -516,6 +518,7 @@ ul.slider li  {
     height: inherit;
     transition: opacity .5s;
     z-index: -1;
+    list-style: none;
 }
 
 ul.slider li img {
@@ -523,6 +526,7 @@ ul.slider li img {
     height: 800px;
     object-fit: cover;
     z-index: -1;
+    list-style: none;
 }
 
 ul.slider li:first-child {
