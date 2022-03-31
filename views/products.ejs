@@ -5,15 +5,20 @@
 <body class="fondo">
     <!--'include headerNavBar'-->
         <%- include('partials/headerNavBar') %>
-        <form action="/" method="POST" enctype="multipart/form-data">
-            <input type="text" name="name_products"  value="nombre producto" placeholder="Nombre producto">
-            <input type="text" name="price" value="precio" placeholder= "price">
-            <label name="upload" class="errors">Subir imagen<input type="file" name="uploadImage_products"></label>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Borrar">
-            <br>
-            <br>
-        </form> 
+        <h2 class="titulares">Todos nuestros productos</h2>
+        <section>
+    <% for(var i=0; i < data.length; i++) { %>
+        <article class="producto">
+            <img src="images/<%= data[i].image %>" width="350" height="350">
+            <div class="fichaProducto">
+                <p class="precio">$<%= data[i].price %></p>
+                <p class="descripciones"><%= data[i].name %></p>
+                <p class="descuentos"><%= data[i].color %></p>
+            </div>
+        </article>
+    
+       <% } %>
+    </section>
         
 
 

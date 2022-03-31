@@ -1,7 +1,7 @@
 function guestMiddleware(req, res, next){
-    if(req.session.usersLogged == undefined){
+    if(req.session.usersLogin == undefined){
         next();
-    }else{res.render('login.ejs',{message: 'debes loguearte o registrarte para continuar'})}
+    }else{res.send('esta pagina es para Usuarios no Registrados')}
 };
 module.exports= guestMiddleware;
 //ATENCION, FALTA:

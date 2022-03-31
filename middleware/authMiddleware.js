@@ -1,6 +1,7 @@
 function authMiddleware(req, res, next){
-    if(req.session.usersLogged != undefined){
+    if(req.session.usersLogin != undefined){
         next();
-    }else{res.render('login.ejs',{message: 'debes loguearte o registrarte para continuar'})}
+    }else{res.send('esta pagina es solo para Usuarios Registrados')}
 };
-module.exports= authMiddleware;
+
+module.export = authMiddleware;
