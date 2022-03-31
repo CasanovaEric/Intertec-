@@ -19,13 +19,13 @@ const controller = {
      register: (req, res) => {
           res.render('../views/register.ejs')
      },
-
+ 
      login: (req, res) => {
           res.render('login.ejs')
      },
      //Create Method for users; 
      create: async (req, res) => {
-
+ 
           let errors = validationResult(req);
           if (errors.isEmpty()) {
              let user = await userModel.create({
@@ -45,8 +45,9 @@ const controller = {
      }else{ 
           res.render('../views/register.ejs', {errors: errors.array(),
           old: req.body})
+         
      }
-
+ 
      },
      //Process for Login user
      processLogin: async (req, res) => {
@@ -55,17 +56,17 @@ const controller = {
                const { email, password } = req.body
                const usersLogin = await userModel.findOne({ where: { email } })
                const checkpassword = await compare(password, usersLogin.password_users)
-               req.session.usersLogged = usersLogin;
                if (!usersLogin || !checkpassword) {
                     return res.render('login.ejs', { errors: [{ msg: 'credenciales invalidas' }] })
                }
-
+ 
+               req.session.usersLogged = usersLogin;
                //req.session.usersLogin.id
                if (req.body.remember != undefined) {
                     res.cookie('recordame', usersLogin.email, { maxAge: 60000 });
                }
                res.render('index.ejs')
-
+ 
           } else {
                return res.render('login.ejs', { errors: errors.errors });
           }
@@ -74,27 +75,10 @@ const controller = {
           await userModel.findByPk(req.session.usersLogged.id_users)
                .then(function (user) {
                     res.render('profileUser.ejs', { user: user })
-
+ 
                }).catch(error => res.send(error))
      },
-     /* updateProfile: async (req, res,) => {
-         const userUpdate = await userModel.update({
-               firstName: req.body.firstName,
-               lastName: req.body.lastName,
-               userName: req.session.usersLogged,
-               email: req.body.email,
-               dateOfBirth: req.body.dateOfBirth,
-               addres: req.session.usersLogged.addres,
-               zipCode: req.session.usersLogged.zipCode,
-               rol_users: req.session.usersLogged.rol_users,
-               password_users: req.session.usersLogged.password,
-               passwordConfirm: req.session.usersLogged.password,
-               image_users: req.session.usersLogged.image_users,
-          }, { where: { id: req.params.id } })
-           
-
-
-     }, */update: (req,res) => {
+    update: (req,res) => {
         let user_id = parseInt(req.params.id);
         console.log("user_id: ", user_id);
        let userUpdate =  userModel
@@ -102,35 +86,55 @@ const controller = {
             {
                firstName: req.body.firstName, 
                lastName: req.body.lastName,
-               userName: req.session.usersLogged.userName,
-               email: req.session.usersLogged.email,
-               dateOfBirth: req.body.dateOfBirth,
-               addres: req.session.usersLogged.addres,
-               zipCode: req.session.usersLogged.zipCode,
-               rol_users: req.session.usersLogged.rol_users,
-               password_users: req.session.usersLogged.password,
-               passwordConfirm: req.session.usersLogged.passwordConfirm,
-               image_users: req.session.usersLogged.image_users,
+               dateOfBirth:req.body.dateOfBirth,
             },
             {
-                where: {id_users : req.params.id}
-            });
-            console.log(userUpdate)
-            return res.json(userUpdate)
-          .then ( ()=> {
-          const otrafuncion = async () => {
-               console.log(await userUpdate)
-           }
-           console.log(otrafuncion)           
-           return res.json(userUpdate)
+                where: {id_users : req.params.id }
             })
+            .then(resultado => {
+               console.log(resultado);
+              // console.log(req.body.firstName, req.body.lastName, req.body.email, req.body.dateOfBirth, req.body.addres, req.body.zipCode)
+               return  res.render('login.ejs');
+             })
           .catch(error => {
-             console.log("Mal di tasea")
+             console.log("SE JO DIO")
              console.log(error)
              res.send(error)
           })
-    }
-};
+    },
+    delete: function (req,res) {
+     let id_users = req.params.id;
+     userModel
+     .findByPk(id_users)
+     .then(user => {
+         return res.render('profileDelete.ejs',{ user:user })
+     })
+     .catch(error => res.send(error))
+ 
+          
+    },
+    destroy: function (req,res) {
+     let id_users = req.params.id;
+     userModel
+     .destroy({where: {id_users: id_users}, force: true}) // force: true es para asegurar que se ejecute la acción
+     .then(()=>{
+         return res.redirect('/register')})
+     .catch(error => res.send(error)) 
+ },
+}    
+
 
 //"MODULE EXPORT"
+
+module.exports= controller;
+
+var ds= 36
+var fe=3
+
+if (ds/fe >12) {
+    console.log("puedo divirlo")
+} else { console.log("no puedo") }
+
+module.exports = controller;
+
 module.exports = controller;

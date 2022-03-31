@@ -64,13 +64,18 @@ const validationsLogin = [
 ]; 
 //Routes Users/Logins
 router.get('/login', usersController.login);
+//Route Process user Login
 router.post('/users/login', validationsLogin, usersController.processLogin);
 //Route for users/Register
 router.get('/register',usersController.register);
 router.post('/', uploadFile.single('uploadImage_users'),  validationsForUsers, usersController.create);
 //Route Update && Delete user
-router.get('/users/edit/:id', usersController.ProfileUser)
+router.get('/users/edit/:id', usersController.ProfileUser);
 //Router Update user
-router.put('/users/edit/:id', usersController.update)
+router.put('/users/edit/:id', usersController.update);
+//Route Delete user
+router.get('/users/delete/:id', usersController.delete);
+//Route Destroy user
+router.put('/users/delete/:id', usersController.destroy);
 //Export Module
 module.exports= router;
