@@ -11,15 +11,15 @@ let cols = {
     },
     names_atributes: {
         type: DataTypes.STRING(200),
-        allowNull: false,
+        allowNull:true,
     },
     values_atributes: {
         type: DataTypes.STRING(200),
-        allowNull: false,
+        allowNull:true,
     },
     id_products:{
         type: DataTypes.INTEGER,
-        allowNull: false,
+        allowNull:true,
     },
 
 };
