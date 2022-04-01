@@ -14,6 +14,18 @@
         "image":"motog9plus.jpg" ,
         "category": "Smartphone",
         "color": "Black" 
-        }
+        },
+
+        {
+            "id": "2",
+            "name":"Motorola g5 Plus" ,
+            "price": "55499",
+            "image":"motog9plus.jpg" ,
+            "category": "Smartphone",
+            "color": "Black" 
+            }
+    
+
+
 
 ]

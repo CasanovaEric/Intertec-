@@ -67,7 +67,7 @@ const controller={
              res.send(error)
           })
     },
-    /* delete: function (req,res) {
+    delete: function (req,res) {
      let id_users = req.params.id;
      userModel
      .findByPk(id_users)
@@ -85,7 +85,7 @@ const controller={
      .then(()=>{
          return res.redirect('/register')})
      .catch(error => res.send(error)) 
- }, */
+ },
 
 
 
