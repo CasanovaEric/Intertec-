@@ -28,6 +28,7 @@ router.get('/create',checkMiddleware, productsController.registerProducts);
 //Route Post register form products;
 router.post('/', uploadFileProducts.single('uploadImage_products'),productsController.create);
 router.get('/detailsProducts/:id', productsController.detail);
+/* router.get('/detailsProducts', productsController.index); */
 //Router Update user
 router.put('/detailsProducts/:id', productsController.update);
 //export Modules
