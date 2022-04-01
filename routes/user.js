@@ -70,7 +70,7 @@ router.post('/users/login', validationsLogin, usersController.processLogin);
 router.get('/register',usersController.register);
 router.post('/', uploadFile.single('uploadImage_users'),  validationsForUsers, usersController.create);
 //Route Update && Delete user
-router.get('/users/edit/:id', usersController.ProfileUser);
+router.get('/users/edit/:id',checkMiddleware, usersController.ProfileUser);
 //Router Update user
 router.put('/users/edit/:id', usersController.update);
 //Route Delete user
