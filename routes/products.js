@@ -22,7 +22,7 @@ const storage= multer.diskStorage({
 });
 const uploadFileProducts = multer({storage});
 //Routes Products
-router.get('/', productsController.index);
+router.get('/detailsProducts', productsController.index);
 //Route Create Product
 router.get('/create',checkMiddleware, productsController.registerProducts);
 //Route Post register form products;
