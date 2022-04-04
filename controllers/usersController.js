@@ -128,13 +128,3 @@ const controller = {
 
 module.exports= controller;
 
-var ds= 36
-var fe=3
-
-if (ds/fe >12) {
-    console.log("puedo divirlo")
-} else { console.log("no puedo") }
-
-module.exports = controller;
-
-module.exports = controller;
