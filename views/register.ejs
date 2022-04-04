@@ -1,4 +1,5 @@
 <!--'include Head'-->
+
 <%- include('partials/head' ,{title: 'register'} )%>
 
 <body class="fondo">
@@ -13,7 +14,7 @@
             }
          %>   
          
-        <form action="/" method="POST" enctype="multipart/form-data">
+        <form class="form-user-register" action="/" method="POST" enctype="multipart/form-data">
             <input type="text" name="firstName"  value="<%= locals.old && old.firstName ? old.firstName : '' %>" placeholder="Nombre">
             <input type="text" name="lastName" value="<%= locals.old && old.lastName ? old.lastName : '' %>" placeholder= "apellido">
             <input type="text" name="userName"   value="<%= locals.old && old.userName ? old.userName : '' %>"placeholder="Nombre de usuario">
@@ -36,8 +37,15 @@
             <br>
             <br>
         </form>
+        <section class="errores">
+            <ul>
+                
+            </ul>
+            
+        </section>
     </main>
 </body>
 <!--'include footer'-->
+<script type="text/javascript" src="/js/registerValidations.js"></script>
 <%- include('partials/footer') %>
 </html>
