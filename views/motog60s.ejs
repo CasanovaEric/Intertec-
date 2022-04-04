@@ -1,32 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-
-    <link href="/css/style.css" rel="stylesheet">
-</head>
-
+<!--'include Head'-->
+<%- include('partials/head' ,{title: 'login'} )%>
 
 <body class="fondo">
- <header class="naranja">  
-    <div class="cabecera1">
-    <div class="logo"> <img src="/images/INTERTEC .png" width="100%"> </div> 
-    <div class="barra"> <input type="search" name="busqueda" placeholder="Buscar: Productos, Marca..."> </div>
-</div>
-<div class="cabecera2"> 
-    
-    <div class="carrito"> <a href="#"> Mi carrito</a> <i class="fas fa-shopping-cart"></i></div>
-    <div class="register"> <a href="#"> Registrarse</a></div>
-    <div class="login"> <a href="#"> Iniciar sesion</a></div>  
-</div>
-</header>
- 
+  <!--'include headerNavBar'-->
+  <%- include('partials/headerNavBar') %>
+
+ <div>
     <main> 
         <nav class="navegacion"> 
             <ul class="desplegable"> 
@@ -149,45 +128,64 @@
 
             </ul>
         </nav>
-
-
-
-
-
-
-<div class="banner"> <img src="/images/banner.jpg"></div>
-
-<h1> ¿QUE BUSCAS? </h1>
-
-<ul> 
-    
-    <div class="contenedor-tres"> 
-    <div class="bateria"><li> <a href="#"> <img src="/images/bateria.png" width="60%"></a> </li> </div>
-   
-    <div class="camara"><li> <a href="#"> <img src="/images/camara.png" width="60%"></a></li> </div>
-   
-    <div class="precio"><li> <a href="#"> <img src="/images/precio.png" width="60%"></a></li> </div>
-    
-    <div class="pantalla"><li> <a href="#"> <img src="/images/pantalla.png" width="60%"></a></li> </div>
-    
-    <div class="memoria"><li> <a href="#"> <img src="/images/memoria.png" width="60%"></a></li> </div>
-   
-    <div class="gaming"><li> <a href="#"> <img src="/images/gaming.png" width="60%"></a></li> </div>
-    
+<<<<<<<< HEAD:views/motog60s.ejs
 </div>
-</ul>
 
 
-<h1> LO MAS BUSCADO </h1>
 
-<a href="#"> <img src="/images/CEL+comprado.png" width="20%"></a> 
-<a href="#"> <img src="/images/CEL+comprado.png" width="20%"></a>
-<a href="#"> <img src="/images/CEL+comprado.png" width="20%"></a>
-    </main>
+ <div class="tituloprod"> MotoG60s </div>
+           
+<div class="container">
+  
+    <ul class="slider">
+      <li id="slide1">
+        <img src="/images/motog60s1.png">
+      </li>
+      <li id="slide2">
+        <img src="/images/g 60s frente.png">
+      </li>
+      <li id="slide3">
+      <img src="/images/motog60satras.png"> 
+      </li>
+    </ul>
     
-</body>
+    <ul class="menu">
+      <li>
+        <a href="#slide1">1</a>
+      </li>
+      <li>
+        <a href="#slide2">2</a>
+      </li>
+       <li>
+        <a href="#slide3">3</a>
+      </li>
+    </ul>
+    
+  </div>
 
-<footer class="fondo2"> 
+<div class="infog60s"> 
+
+<div class="titulo"> SORPRENDENTEMENTE REAL CON INCREÍBLE FLUIDEZ </div>
+
+<p>Disfrutá de la pantalla más grande, amplia y envolvente jamás vista en un moto g. 
+    La pantalla Max Vision FHD+ de 6.8" ofrece una gama de colores de un 10 % más amplia5. 
+    Colores vívidos y reales con contraste únicos y además un aumento del 25 % de brillo6 ante la luz solar. 
+    La frecuencia de actualización de 120 Hz te ofrece una increíble fluidez en las transiciones en cualquier situación.</p>
+
+    <div class="titulo"> APROVECHÁ LA ALTA RESOLUCIÓN </div>
+
+<p> Asegúrate de que tus amigos y familiares se vean perfectos siempre. 
+    El sensor de ultra alta resolución de 64 MP proporciona una claridad inigualable y una gran precisión de color. 
+    Y, cuando no hay mucha luz, la tecnología Quad Pixel garantiza que todas las fotos salgan nítidas y brillantes gracias a una sensibilidad 4 veces mayor a la luz9.</p>
+
+<img class="camfrontal" src="/images/camarasg60s.png" width="500px">
+
+</div>
+
+</div>
+
+
+  <footer class="fondo2"> 
     <div class="contenedor-cuatro"> 
     <img  class="logo-pie" src="/images/INTERTEC .png" width="10%">
 
@@ -199,32 +197,65 @@
     <li> <a href="#"> Quienes somos</a></li>
     <li> <a href="#"> Nuestra mision</a></li>
     <li> <a href="#"> Nuestra vision</a></li>
+========
+>>>>>>>> 3cef78d1c11f8a7bec32358d03ef87d0a7bb8664:views/DetailsProducts.ejs
 </div>
 
-</ul>
 
-<div class="venta-online"> 
-    <h4> Venta online </h4>
-<ul> 
-    <li> <a href="#"> Preguntas frecuentes</a></li>
-    <li> <a href="#"> Terminos y condicions</a></li>
-    <li> <a href="#"> Contacto</a></li>
-    <li> <a href="#"> Ventar corporativa</a></li>
+
+ <div class="tituloprod"> MotoG60s </div>
+           
+<div class="container">
+  
+    <ul class="slider">
+      <li id="slide1">
+        <img src="/images/motog60s1.png">
+      </li>
+      <li id="slide2">
+        <img src="/images/g 60s frente.png">
+      </li>
+      <li id="slide3">
+      <img src="/images/motog60satras.png"> 
+      </li>
+    </ul>
+    
+    <ul class="menu">
+      <li>
+        <a href="#slide1">1</a>
+      </li>
+      <li>
+        <a href="#slide2">2</a>
+      </li>
+       <li>
+        <a href="#slide3">3</a>
+      </li>
+    </ul>
+    
+  </div>
+
+<div class="infog60s"> 
+
+<div class="titulo"> SORPRENDENTEMENTE REAL CON INCREÍBLE FLUIDEZ </div>
+
+<p>Disfrutá de la pantalla más grande, amplia y envolvente jamás vista en un moto g. 
+    La pantalla Max Vision FHD+ de 6.8" ofrece una gama de colores de un 10 % más amplia5. 
+    Colores vívidos y reales con contraste únicos y además un aumento del 25 % de brillo6 ante la luz solar. 
+    La frecuencia de actualización de 120 Hz te ofrece una increíble fluidez en las transiciones en cualquier situación.</p>
+
+    <div class="titulo"> APROVECHÁ LA ALTA RESOLUCIÓN </div>
+
+<p> Asegúrate de que tus amigos y familiares se vean perfectos siempre. 
+    El sensor de ultra alta resolución de 64 MP proporciona una claridad inigualable y una gran precisión de color. 
+    Y, cuando no hay mucha luz, la tecnología Quad Pixel garantiza que todas las fotos salgan nítidas y brillantes gracias a una sensibilidad 4 veces mayor a la luz9.</p>
+
+<img class="camfrontal" src="/images/camarasg60s.png" width="500px">
+
 </div>
-</ul>
-
-
-<div class="soporte"> 
-    <h4> Soporte </h4>
-<ul> 
-    <li> <a href="#"> Celulares y accesorios</a></li>
-    <li> <a href="#"> Manuales y garantias</a></li>
-    <li> <a href="#"> Ponete en contacto con nosotros</a></li>
-</div>
-</ul>
 
 </div>
-</footer>
 
+
+      <!--'include footer'-->
+<%- include('partials/footer') %>
 
 </html>

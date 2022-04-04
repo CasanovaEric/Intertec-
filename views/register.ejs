@@ -1,0 +1,45 @@
+<!--'include Head'-->
+
+<%- include('partials/head' ,{title: 'register'} )%>
+
+<body class="fondo">
+
+    <!--'include headerNavBar'-->
+    <%- include('partials/headerNavBar') %>
+    <!-- <% if (locals.errors){
+        errors.forEach(function(error) { %>
+    <p class="errors"><%= error.msg %></p>
+    <% })
+        }
+     %>     -->
+    <title>Register</title>
+    </head>
+    <body class="body-box">
+        <section class="form-register">
+        
+            <h5>Register Form</h5>
+            <form  class="form-user-register" action="/"  method="POST" enctype="multipart/form-data" >
+                <input class="controls" type="text" name="firstName"  value="<%= locals.old && old.firstName ? old.firstName : '' %>" placeholder="Name">
+                <input class="controls" type="text" name="lastName" value="<%= locals.old && old.lastName ? old.lastName : '' %>" placeholder= "Last name">
+                <input class="controls" type="text" name="userName"   value="<%= locals.old && old.userName ? old.userName : '' %>"placeholder="Username">
+                <input class="controls" type="email" name="email"  value="<%= locals.old && old.email ? old.email : '' %>" placeholder="E-mail"><br>
+                <input class="controls" type="date" name="dateOfBirth" id="birth_date">
+                <input class="controls" type="text" name="addres" value="<%= locals.old && old.addres ? old.addres : '' %>" placeholder="Adress">
+                <input class="controls" type="number" name="zipCode"  value="<%= locals.old && old.zipCode ? old.zipCode : '' %>" placeholder="Zip Code"><br>
+                <input class="controls" type="password" name="password" placeholder="Choose your password">
+                <input class="controls" type="password" name="passwordConfirm" placeholder="Confirm your password"><br>
+                <label class="control-errors" name="upload"> Upload image</label>
+                <input class="control-file" type="file" name="uploadImage_users"><br>
+                <input class="controls" type="text" name="vendedor"   value="vendedor" placeholder="vendedor"><br>
+                <input class="buttons" type="submit" value="Send">
+                <input class="buttons" type="reset" value="Delete">
+                <br>
+            </form>
+        </section>
+    </main>
+</body>
+
+<!--'include footer'-->
+<script type="text/javascript" src="/js/registerValidations.js"></script>
+<%- include('partials/footer') %>
+</html>

@@ -1,0 +1,27 @@
+<html>
+<!--'include Head'-->
+<%- include('partials/head' ,{title: 'products'} )%>
+
+<body class="fondo">
+    <!--'include headerNavBar'-->
+        <%- include('partials/headerNavBar') %>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <input type="text" name="name_products"  value="nombre producto" placeholder="Nombre producto">
+            <input type="text" name="price" value="precio" placeholder= "price">
+            <label name="upload" class="errors">Subir imagen<input type="file" name="uploadImage_products"></label>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar">
+            <br>
+            <br>
+        </form> 
+        
+
+
+
+</body>
+
+<!--'include footer'-->
+<%- include('partials/footer') %>
+
+
+</html>

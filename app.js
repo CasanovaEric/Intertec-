@@ -1,18 +1,43 @@
-const express = require ("express")
-const path = require("path")
-const app = express ()
+//Const 
+const express = require('express');
+const app = express();
+const path= require('path');
+const methodOverride = require('method-override')
+//Require Routes /users,/products,/Api
+const RouteMain= require('./routes/main');
+const RouteUser= require('./routes/user');
+const RouteProducts = require('./routes/products');
+const RouteApi = require('./routes/RouteApi')
+//Require cors for api
+const cors = require('cors')
+const publicPath = path.resolve(__dirname, '/public');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const remembermeMiddleware = require('./middleware/RemembermeMiddleware');
 
-const publicPath = path.resolve (__dirname, "./public") 
-app.use(express.static(publicPath))
 
-app.listen(4000, () => 
-console.log("Houston todo en orden en el puerto"))
-
-app.get("/", (req, res) => { 
-    res.sendFile(path.join(__dirname + "/views/index.html"))
-})
-
-app.get("/bateria", (req, res) => { 
-    res.sendFile(path.join(__dirname + "/views/bateria.html"))
-})
+//Method use 
+app.listen(process.env.PORT || 3000, function() {
+    
+    console.log('Servidor corriendo en puerto 3000');
+});
+app.use(methodOverride('_method'))
+app.use(express.static('public'));
+app.set('views engine', 'ejs');
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
+app.use(cookieParser());
+app.use(remembermeMiddleware);
+app.use(session({secret: 'this is secret' , resave: true,
+saveUninitialized: true}))
+app.use(cors());
+//"ROUTER PRODUCTS"
+//Route Main
+app.use('/', RouteMain);
+//app.use('/', RouteProducts);
+app.use('/products', RouteProducts);
+//Router users
+ app.use('/', RouteUser);
+ //Route Api intertec!!
+ app.use('/api', RouteApi);
 
