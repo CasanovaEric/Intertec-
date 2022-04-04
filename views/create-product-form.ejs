@@ -4,7 +4,13 @@
 <body class='fondo'>
     <!--'Inlcude HeaderNavbar'-->
     <%- include('partials/headerNavBar') %>
-    <form action="/products" method="POST" enctype="multipart/form-data">
+    <section class="errores">
+        <ul>
+        
+        </ul>
+    <br>
+    </section>
+    <form action="/products" class="form-user-register" method="POST" enctype="multipart/form-data">
         <input type="text" name="name_products" placeholder="Nombre producto">
         <input type="text" name="price"  placeholder= "precio">
         <input type="text" name="nameAtribute"  placeholder= "atributo1">
@@ -20,4 +26,5 @@
     
     <!--'include footer'-->
 <%- include('partials/footer') %>
+<script type="text/javascript" src="/js/productsValidations.js"></script>
 </body>
