@@ -17,11 +17,11 @@ let password = formulario.querySelector("input[name='password']")
 password.label = "Contraseña"
 let passwordConfirm = formulario.querySelector("input[name='passwordConfirm']")
 passwordConfirm.label = "Confirmar Contraseña"
-let upload = formulario.querySelector("input[name='uploadImage_users']")
+let upload = formulario.querySelector("input[name=' uploadImage']")
 upload.label = "Subir imagen"
-let vendedor = formulario.querySelector("input[name='vendedor']")
-vendedor.label = "Rol"
-let elementos=[firstName,lastName,userName,email,dateOfBirth,addres,zipCode,password,passwordConfirm,upload,vendedor]
+//let vendedor = formulario.querySelector("input[name='vendedor']")
+//vendedor.label = "Rol"
+let elementos=[firstName,lastName,userName,email,dateOfBirth,addres,zipCode,password,passwordConfirm,upload]
 let errores=[]
 
 
