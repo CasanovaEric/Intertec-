@@ -18,6 +18,12 @@
         <section class="form-register">
         
             <h5>Register Form</h5>
+            <section class="errores">
+                <ul>
+                
+                </ul>
+            <br>
+            </section>
             <form  class="form-user-register" action="/"  method="POST" enctype="multipart/form-data" >
                 <input class="controls" type="text" name="firstName"  value="<%= locals.old && old.firstName ? old.firstName : '' %>" placeholder="Name">
                 <input class="controls" type="text" name="lastName" value="<%= locals.old && old.lastName ? old.lastName : '' %>" placeholder= "Last name">
