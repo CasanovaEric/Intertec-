@@ -6,6 +6,7 @@
 
     <!--'include headerNavBar'-->
     <%- include('partials/headerNavBar') %>
+
     <main class="register">
         <% if (locals.errors){
             errors.forEach(function(error) { %>
@@ -45,6 +46,7 @@
         </section>
     </main>
 </body>
+
 <!--'include footer'-->
 <script type="text/javascript" src="/js/registerValidations.js"></script>
 <%- include('partials/footer') %>
