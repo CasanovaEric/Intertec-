@@ -5,39 +5,32 @@
 
     <!--'include headerNavBar'-->
     <%- include('partials/headerNavBar') %>
-    <main class="register">
-        <% if (locals.errors){
-            errors.forEach(function(error) { %>
-        <p class="errors"><%= error.msg %></p>
-        <% })
-            }
-         %>   
-         
-        <form action="/" method="POST" enctype="multipart/form-data">
-            <input type="text" name="firstName"  value="<%= locals.old && old.firstName ? old.firstName : '' %>" placeholder="Nombre">
-            <input type="text" name="lastName" value="<%= locals.old && old.lastName ? old.lastName : '' %>" placeholder= "apellido">
-            <input type="text" name="userName"   value="<%= locals.old && old.userName ? old.userName : '' %>"placeholder="Nombre de usuario">
-            <input type="email" name="email"  value="<%= locals.old && old.email ? old.email : '' %>" placeholder="E-mail">
-            <br>
-            <br>
-            <input type="date" name="dateOfBirth" id="birth_date">
-            <input type="text" name="addres" value="<%= locals.old && old.addres ? old.addres : '' %>" placeholder="Domicilio">
-            <input type="text" name="zipCode"  value="<%= locals.old && old.zipCode ? old.zipCode : '' %>" placeholder="Codigo Postal">
-            <h4></h4>
-            <input type="password" name="password" placeholder="Elegí tu contraseña">
-            <input type="password" name="passwordConfirm" placeholder="Confirmá tu contraseña">
-            <br>
-            <label name="upload" class="errors">Subir imagen<input type="file" name="uploadImage_users"></label>
-            <br>
-            <input name="vendedor" class="vendedor" placeholder="rol Comprador O Vendedor">
-            <br>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Borrar">
-            <br>
-            <br>
-        </form>
-    </main>
-</body>
+  
+    <title>Register</title>
+    </head>
+    <body class="body-box">
+        <section class="form-register">
+        
+            <h5>Register Form</h5>
+            <form action="/"  method="POST" enctype="multipart/form-data">
+                <input class="controls" type="text" name="firstName"  value="<%= locals.old && old.firstName ? old.firstName : '' %>" placeholder="Name">
+                <input class="controls" type="text" name="lastName" value="<%= locals.old && old.lastName ? old.lastName : '' %>" placeholder= "Last name">
+                <input class="controls" type="text" name="userName"   value="<%= locals.old && old.userName ? old.userName : '' %>"placeholder="Username">
+                <input class="controls" type="email" name="email"  value="<%= locals.old && old.email ? old.email : '' %>" placeholder="E-mail"><br>
+                <input class="controls" type="date" name="dateOfBirth" id="birth_date">
+                <input class="controls" type="text" name="addres" value="<%= locals.old && old.addres ? old.addres : '' %>" placeholder="Adress">
+                <input class="controls" type="number" name="zipCode"  value="<%= locals.old && old.zipCode ? old.zipCode : '' %>" placeholder="Zip Code"><br>
+                <input class="controls" type="password" name="password" placeholder="Choose your password">
+                <input class="controls" type="password" name="passwordConfirm" placeholder="Confirm your password"><br>
+                <label class="control-errors" name="upload"> Upload image</label>
+                <input class="control-file" type="file" name=" uploadImage"><br><br>
+                <input class="buttons" type="submit" value="Send">
+                <input class="buttons" type="reset" value="Delete">
+                <br>
+            </form>
+        </section>
+    </body>
+    </html>
 <!--'include footer'-->
 <%- include('partials/footer') %>
 </html>

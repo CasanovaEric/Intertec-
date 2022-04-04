@@ -6,7 +6,7 @@ const ApiUsers = require('../controllers/ControllerApiUsers')
 const ApiProducts = require('../controllers/ControllerApiProducts')
 //Route api/user
 Router.get('/user', ApiUsers.index)
-//Route Post api/user
+//Route Post api/user 
 
 //Route api/user/id
 Router.get('/user/:id', ApiUsers.profile)
