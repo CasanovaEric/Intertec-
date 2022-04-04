@@ -4,7 +4,12 @@
 <body class="fondo">
     <!--'include headerNavBar'-->
     <%- include('partials/headerNavBar') %>
-
+    <% if (locals.errors){
+        errors.forEach(function(error) { %>
+    <p class="errors"><%= error.msg %></p>
+    <% })
+        }
+     %>  
     <body class="body-box">
         <section class="form-login">
             <h5>Form Login</h5>
