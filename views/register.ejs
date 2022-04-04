@@ -5,7 +5,12 @@
 
     <!--'include headerNavBar'-->
     <%- include('partials/headerNavBar') %>
-  
+    <% if (locals.errors){
+        errors.forEach(function(error) { %>
+    <p class="errors"><%= error.msg %></p>
+    <% })
+        }
+     %>    
     <title>Register</title>
     </head>
     <body class="body-box">
