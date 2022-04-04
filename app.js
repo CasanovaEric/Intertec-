@@ -32,3 +32,4 @@ app.use(cookieParser());
 app.use(remembermeMiddleware);
 //Router users
 app.use('/', RouteUser);
+app.use('/', RouteMain);
